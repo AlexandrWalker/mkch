@@ -1,0 +1,36 @@
+.innerPage {
+
+  .news {
+    padding-top: 5rem;
+  }
+}
+
+.press {
+  .news__item:nth-child(1) {
+    grid-column: 1 / 4;
+    height: 63.9rem;
+    padding: 9rem 8rem 5rem;
+
+    .news__item-title {
+      font-size: 3rem;
+      max-width: 32rem;
+    }
+
+    .news__item-date {
+      font-size: 3.4rem;
+    }
+
+    .news__item-count {
+      font-size: 12rem;
+    }
+  }
+
+  .news__item:nth-child(2) {
+    grid-column: unset;
+    grid-row: 2/3;
+  }
+
+  .news__item-title {
+    width: 60%;
+  }
+}

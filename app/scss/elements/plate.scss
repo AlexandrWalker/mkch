@@ -1,0 +1,36 @@
+.cookie {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+
+  &__block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 7rem;
+    padding: 2rem;
+    background-color: var(--primary-bg);
+    box-shadow: 0rem 0.7rem 3rem var(--black-15);
+
+    a {
+      color: var(--primary-accent);
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    .btn {
+      --button-font-size: 1.4rem;
+      --button-height: 5rem;
+      max-width: 52rem;
+      width: 100%;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+  }
+}

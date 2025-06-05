@@ -1,0 +1,470 @@
+.about {
+  padding-top: 5rem;
+
+  background-image: url(./../images/about/wave.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center 14.2rem;
+
+  &__title {
+    color: var(--primary-black);
+    margin-bottom: 6rem;
+  }
+
+  &__blocks {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 11rem;
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: calc(100% - 60rem);
+    position: relative;
+  }
+
+  &__wrap {
+    overflow: hidden;
+  }
+
+  &__img {
+    width: auto;
+    height: 63.9rem;
+    object-fit: contain;
+  }
+
+  &__presentation {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 3rem;
+    background-color: var(--primary-accent);
+    margin-top: -16.3rem;
+    margin-right: 11.8rem;
+    width: 32.4rem;
+    height: 27.5rem;
+    color: var(--white);
+    z-index: 1;
+
+    &-title {
+      font-weight: 700;
+      font-size: 2rem;
+      line-height: 110%;
+    }
+
+    &-subtitle {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 400;
+      font-size: 1.2rem;
+      line-height: 125%;
+      color: var(--white);
+    }
+
+    &-icon {
+      width: 1.3rem;
+      height: 1.3rem;
+      object-fit: contain;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    width: 48rem;
+
+    &-title {
+      font-weight: 700;
+      font-size: 4rem;
+      line-height: 120%;
+      color: var(--primary-color);
+    }
+
+    &-text {
+      font-weight: 400;
+      font-size: 1.6rem;
+      line-height: 120%;
+    }
+  }
+}
+
+.video {
+
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    color: inherit;
+    cursor: pointer;
+
+    &-icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 8.5rem;
+      height: 8.5rem;
+      border-radius: 50%;
+      border: 0.1rem solid var(--primary-black-30);
+
+      img {
+        width: 1.875rem;
+        height: 2.165rem;
+        object-fit: cover;
+        flex-shrink: 0;
+      }
+    }
+
+    &-text {
+      font-weight: 400;
+      font-size: 1.6rem;
+      line-height: 125%;
+    }
+  }
+}
+
+.history {
+
+  &__title {
+    margin-bottom: 6rem;
+  }
+
+  &__slide {
+    width: 47.2rem;
+  }
+
+  &__slider {
+    margin-bottom: 5rem;
+
+    &-item {}
+
+    &-year {
+      display: block;
+      font-weight: 700;
+      font-size: 5rem;
+      line-height: 5.7rem;
+      opacity: 0.5;
+      margin-bottom: 4rem;
+      transition: all 0.3s ease;
+    }
+
+    &-line {
+      display: block;
+      width: 100%;
+      height: 0.1rem;
+      background-color: var(--primary-black-50);
+      margin-bottom: 5rem;
+      position: relative;
+
+      span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        transition: width 0.6s;
+        background-color: var(--primary-accent);
+
+        &.active {
+          width: 100%;
+
+          &::before {
+            background-color: var(--primary-accent);
+          }
+        }
+
+        &::before {
+          content: "";
+          display: block;
+          width: 2.1rem;
+          height: 2.1rem;
+          border-radius: 50%;
+          background-color: var(--primary-black);
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translateY(-50%);
+          transition: all 0.3s ease;
+        }
+      }
+    }
+
+    &-text {
+      font-weight: 400;
+      font-size: 1.6rem;
+      line-height: 120%;
+      opacity: 0.5;
+      transition: all 0.3s ease;
+      max-width: 32.4rem;
+    }
+  }
+
+  .swiper-slide-active {
+    .history__slider-year {
+      font-size: 8rem;
+      color: var(--primary-accent);
+      opacity: 1;
+    }
+
+    .history__slider-line {
+
+      &::before {
+        background-color: var(--primary-accent);
+      }
+    }
+
+    .history__slider-text {
+      opacity: 1;
+    }
+  }
+
+  &__adv {
+    &-items {
+      display: flex;
+      gap: 3rem;
+    }
+
+    &-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 7rem 7.5rem 7.5rem;
+      border: 0.1rem solid var(--primary-black-50);
+      font-weight: 700;
+      font-size: 1.6rem;
+      line-height: 120%;
+      text-align: center;
+    }
+
+    &-img {
+      width: auto;
+      height: 10rem;
+      object-fit: contain;
+      margin-bottom: 9rem;
+    }
+
+    &-title {
+      font-weight: 700;
+      margin-bottom: 2rem;
+    }
+
+    &-text {
+      opacity: 0.5;
+    }
+  }
+}
+
+.values {
+  background-color: var(--primary-black);
+  color: var(--white);
+  padding: 9rem 0 8rem;
+  margin-bottom: 0;
+  border-bottom: 0.1rem solid var(--primary-bg-30);
+
+  &__inner {
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+    position: relative;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    width: 42rem;
+    z-index: 2;
+
+    &-title {
+      font-weight: 700;
+      font-size: 4rem;
+      line-height: 110%;
+      margin-bottom: 4rem;
+    }
+  }
+
+  &__thumbs {
+    position: relative;
+
+    .swiper-slide {
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .swiper-slide-active {
+      opacity: 1;
+      visibility: visible;
+      transition: all 0.3s ease;
+    }
+
+    .swiper-pagination {
+      position: static;
+      font-weight: 700;
+      font-size: 3rem;
+      line-height: 110%;
+      color: var(--primary-accent);
+      text-align: left;
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__values {
+    margin-bottom: 11rem;
+  }
+
+  &__block {
+    width: calc(100% - 47rem);
+  }
+
+  &__slider {
+    z-index: 1;
+
+    &-item {
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+      position: relative;
+    }
+
+    &-img {
+      z-index: 1;
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+
+    &-title {
+      font-weight: 700;
+      font-size: 6rem;
+      line-height: 110%;
+      text-align: right;
+      position: absolute;
+      bottom: 6rem;
+      right: 6rem;
+      z-index: 2;
+    }
+
+    .swiper-slide {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .swiper-slide-active,
+    .swiper-slide-active+.swiper-slide {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .swiper-button-prev {
+      display: none;
+      background-color: var(--primary-accent);
+      position: absolute;
+      top: unset;
+      bottom: unset;
+      right: unset;
+      left: unset;
+      width: 4rem;
+      height: 4rem;
+
+      &::before {
+        font-size: 2.8rem;
+      }
+    }
+
+    .swiper-button-next {
+      background-color: var(--primary-accent);
+      position: absolute;
+      top: unset;
+      bottom: 0;
+      right: unset;
+      left: 0;
+      width: 11.5rem;
+      height: 11.5rem;
+
+      &::before {
+        font-size: 2.8rem;
+      }
+    }
+  }
+}
+
+.mission {
+  color: var(--primary-white);
+  background-color: var(--primary-black);
+  padding-top: 3rem;
+  background-image: url(./../images/wave-about.png);
+  background-repeat: no-repeat;
+  // background-position: right 10rem;
+  background-position: right 26rem;
+  background-size: cover;
+
+  overflow: hidden;
+
+  &__inner {
+    display: flex;
+    flex-direction: row;
+    gap: 8rem;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 56rem;
+    padding: 8rem 0;
+  }
+
+  &__quote {
+    height: 100%;
+
+    &-icon {
+      width: auto;
+      height: 9.5rem;
+      object-fit: contain;
+      flex-shrink: 0;
+      margin-bottom: 5rem;
+    }
+
+    &-text {
+      font-weight: 700;
+      font-size: 4rem;
+      line-height: 120%;
+    }
+
+    &-author {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      font-style: italic;
+      font-weight: 500;
+      font-size: 2.4rem;
+      line-height: 110%;
+      color: var(--primary-accent);
+
+      city {
+        font-weight: 500;
+        font-size: 1.6rem;
+        line-height: 125%;
+        color: var(--primary-white);
+      }
+    }
+  }
+
+  &__photo {
+    width: auto;
+    height: 77.1rem;
+    object-fit: contain;
+    margin-top: 3rem;
+
+    &-img {
+      // width: 100%;
+      width: auto;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

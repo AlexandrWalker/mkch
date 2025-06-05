@@ -1,0 +1,74 @@
+.certif {
+  padding-top: 5rem;
+  
+  &__inner {
+    position: relative;
+  }
+
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 4rem;
+    margin-bottom: 4rem;
+    border-bottom: 0.1rem solid var(--primary-grey-20);
+  }
+
+  &__body {}
+
+  &__text {
+    width: 92%;
+    margin-bottom: 4rem;
+  }
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 3rem;
+    background-color: var(--white);
+    width: calc(25% - 2.25rem);
+    height: 41.5rem;
+    position: relative;
+
+    &-title {
+      font-weight: 700;
+      font-size: 2rem;
+      line-height: 110%;
+      color: var(--primary-black);
+    }
+
+    &-img {
+      width: 13.6rem;
+      height: 13.6rem;
+      object-fit: contain;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &-text {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 400;
+      font-size: 1.2rem;
+      line-height: 100%;
+      color: var(--primary-color-50);
+    }
+
+    &-icon {
+      width: 1.3rem;
+      height: 1.3rem;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+  }
+}

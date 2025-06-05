@@ -1,0 +1,467 @@
+<!--=include head.html-->
+<div class="wrapper innerPage">
+  <!--=include header.html-->
+  <!-- Содержимое сайта -->
+  <main class="main">
+    <!-- Хлебные крошки -->
+    <section class="breadcrumb">
+      <div class="container">
+        <div class="breadcrumb__inner">
+          <ul>
+            <li>
+              <a href="/">
+                Главная
+              </a>
+            </li>
+
+            <li>
+              <a href="">
+                Продукция
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- Главный блок -->
+    <section class="catalog">
+      <div class="container catalog__container">
+        <div class="catalog__inner tabs">
+          <h2 class="catalog__title block-title">
+            Продукция
+          </h2>
+          <div class="catalog__head">
+            <div class="filter">
+              <p class="filter__text">
+                Жирность:
+              </p>
+              <div class="filter__items tabs__filter tabs__filter--active" data-tab="milk">
+                <div class="filter__item">
+                  <input id="filter_1" type="radio" name="filter" checked>
+                  <label for="filter_1">
+                    2,5%
+                  </label>
+                </div>
+                <div class="filter__item">
+                  <input id="filter_2" type="radio" name="filter">
+                  <label for="filter_2">
+                    3,2%
+                  </label>
+                </div>
+                <div class="filter__item">
+                  <input id="filter_3" type="radio" name="filter">
+                  <label for="filter_3">
+                    1,5%
+                  </label>
+                </div>
+              </div>
+              <div class="filter__items tabs__filter" data-tab="cream">
+                <div class="filter__item">
+                  <input id="filter_4" type="radio" name="filter" checked>
+                  <label for="filter_4">
+                    15%
+                  </label>
+                </div>
+                <div class="filter__item">
+                  <input id="filter_5" type="radio" name="filter">
+                  <label for="filter_5">
+                    20%
+                  </label>
+                </div>
+              </div>
+              <div class="filter__items tabs__filter" data-tab="butter">
+                <div class="filter__item">
+                  <input id="filter_6" type="radio" name="filter" checked>
+                  <label for="filter_6">
+                    82,5%
+                  </label>
+                </div>
+                <div class="filter__item">
+                  <input id="filter_7" type="radio" name="filter">
+                  <label for="filter_7">
+                    72,5%
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="catalog__btns">
+              <a class="catalog__btn" href="/b2c">
+                ДЛЯ B2C
+              </a>
+              <a class="catalog__btn catalog__btn--active" href="/b2b">
+                ДЛЯ B2B
+              </a>
+            </div>
+            <div class="tabs__btns">
+              <div class="tabs__btn tabs__btn--active" data-tab="milk">
+                Молоко
+              </div>
+              <div class="tabs__btn" data-tab="cream">
+                Сметана
+              </div>
+              <div class="tabs__btn" data-tab="butter">
+                Масло
+              </div>
+            </div>
+            <div class="dropdown">
+              <button class="dropdown__button icon-chevron-arrow tabs__btn tabs__btn--active" data-value="Молоко"
+                data-tab="milk">
+                Молоко
+              </button>
+              <ul class="dropdown__list dropdown__list-border">
+                <li class="dropdown__list-item " data-value="Молоко" data-tab="milk">
+                  Молоко
+                </li>
+                <li class="dropdown__list-item" data-value="Сметана" data-tab="cream">
+                  Сметана
+                </li>
+                <li class="dropdown__list-item" data-value="Масло" data-tab="butter">
+                  Масло
+                </li>
+              </ul>
+              <input type="text" name="select-category" value="all" class="dropdown__input-hidden">
+            </div>
+          </div>
+          <div class="catalog__body">
+            <div data-tab="milk" class="catalog__items tabs__panel tabs__panel--active">
+
+              <div class="catalog__item">
+                <a class="product__item" href="/moloko_3.2_1000">
+                  <img class="product__item-img" src="./images/card/moloko_3.2_1000.png" alt="">
+                  <div class="sticker">
+                    <img src="./images/card/sticker.svg" alt="">
+                    <span>3,2 %</span>
+                  </div>
+                  <span class="product__item-name">
+                    Молоко Молодчинка 3,2 % 1000 мл
+                  </span>
+                  <p class="product__item-desc">
+                    Молоко питьевое пастеризованное с массовой долей жира 3,2% ГОСТ 31450-2013
+                  </p>
+                  <span class="product__item-link link">
+                    <i class="icon-chevron-circle"></i>
+                    Подробнее
+                  </span>
+                </a>
+              </div>
+
+              <div class="catalog__item">
+                <a class="product__item" href="/moloko_3.2_1500">
+                  <img class="product__item-img" src="./images/card/moloko_3.2_1500.png" alt="">
+                  <div class="sticker">
+                    <img src="./images/card/sticker.svg" alt="">
+                    <span>3,2 %</span>
+                  </div>
+                  <span class="product__item-name">
+                    Молоко Молодчинка 3,2 % 1500 мл
+                  </span>
+                  <p class="product__item-desc">
+                    Молоко питьевое пастеризованное с массовой долей жира 3,2% ГОСТ 31450-2013
+                  </p>
+                  <span class="product__item-link link">
+                    <i class="icon-chevron-circle"></i>
+                    Подробнее
+                  </span>
+                </a>
+              </div>
+
+              <div class="catalog__item">
+                <a class="product__item" href="/moloko_2.5_1000">
+                  <img class="product__item-img" src="./images/card/moloko_2.5_1000.png" alt="">
+                  <div class="sticker">
+                    <img src="./images/card/sticker.svg" alt="">
+                    <span>2,5 %</span>
+                  </div>
+                  <span class="product__item-name">
+                    Молоко Молодчинка 2,5 % 1000 мл
+                  </span>
+                  <p class="product__item-desc">
+                    Молоко питьевое пастеризованное с массовой долей жира 2,5% ГОСТ 31450-2013
+                  </p>
+                  <span class="product__item-link link">
+                    <i class="icon-chevron-circle"></i>
+                    Подробнее
+                  </span>
+                </a>
+              </div>
+
+              <div class="catalog__item">
+                <a class="product__item" href="/moloko_2.5_1500">
+                  <img class="product__item-img" src="./images/card/moloko_2.5_1500.png" alt="">
+                  <div class="sticker">
+                    <img src="./images/card/sticker.svg" alt="">
+                    <span>2,5 %</span>
+                  </div>
+                  <span class="product__item-name">
+                    Молоко Молодчинка 2,5 % 1500 мл
+                  </span>
+                  <p class="product__item-desc">
+                    Молоко питьевое пастеризованное с массовой долей жира 2,5% ГОСТ 31450-2013
+                  </p>
+                  <span class="product__item-link link">
+                    <i class="icon-chevron-circle"></i>
+                    Подробнее
+                  </span>
+                </a>
+              </div>
+
+              <div class="catalog__item">
+                <a class="product__item" href="/suhoe_moloko_25kg">
+                  <img class="product__item-img" src="./images/card/suhoe_moloko.png" alt="Сухое обезжиренное молоко">
+                  <div class="sticker">
+                    <img src="./images/card/sticker.svg" alt="">
+                    <span>1,5 %</span>
+                  </div>
+                  <span class="product__item-name">
+                    Сухое обезжиренное молоко
+                  </span>
+                  <p class="product__item-desc">
+                    Мешок 25кг. ГОСТ 33629-2015
+                  </p>
+                  <span class="product__item-link link">
+                    <i class="icon-chevron-circle"></i>
+                    Подробнее
+                  </span>
+                </a>
+              </div>
+
+              <div class="catalog__item">
+                <a class="product__item" href="/suhoe_moloko_dlya_detskogo_pitanya_25kg">
+                  <img class="product__item-img" src="./images/card/suhoe_moloko.png"
+                    alt="Молоко сухое обезжиренное для производства продуктов детского питания">
+                  <div class="sticker">
+                    <img src="./images/card/sticker.svg" alt="">
+                    <span>1.5 %</span>
+                  </div>
+                  <span class="product__item-name">
+                    Молоко сухое обезжиренное для производства продуктов детского питания
+                  </span>
+                  <p class="product__item-desc">
+                    Мешок 25кг. ГОСТ 34255-2017
+                  </p>
+                  <span class="product__item-link link">
+                    <i class="icon-chevron-circle"></i>
+                    Подробнее
+                  </span>
+                </a>
+              </div>
+
+            </div>
+            <div data-tab="cream" class="catalog__items tabs__panel">
+              <div class="catalog__item">
+                <a class="product__item" href="/cream_15">
+                  <img class="product__item-img" src="./images/card/cream_15.png" alt="">
+                  <div class="sticker">
+                    <img src="./images/card/sticker.svg" alt="">
+                    <span>15 %</span>
+                  </div>
+                  <span class="product__item-name">
+                    Сметана 15 %, 350 мл
+                  </span>
+                  <p class="product__item-desc">
+                    Сметана с массовой долей жира 15%, ГОСТ 31452-2012
+                  </p>
+                  <span class="product__item-link link">
+                    <i class="icon-chevron-circle"></i>
+                    Подробнее
+                  </span>
+                </a>
+              </div>
+              <div class="catalog__item">
+                <a class="product__item" href="/cream_20">
+                  <img class="product__item-img" src="./images/card/cream_20.png" alt="">
+                  <div class="sticker">
+                    <img src="./images/card/sticker.svg" alt="">
+                    <span>20 %</span>
+                  </div>
+                  <span class="product__item-name">
+                    Сметана 20 %
+                  </span>
+                  <p class="product__item-desc">
+                    Сметана с массовой долей жира 20%, ГОСТ 31452-2012
+                  </p>
+                  <span class="product__item-link link">
+                    <i class="icon-chevron-circle"></i>
+                    Подробнее
+                  </span>
+                </a>
+              </div>
+            </div>
+            <div data-tab="butter" class="catalog__items tabs__panel">
+
+              <div class="catalog__item">
+                <a class="product__item" href="/maslo_82.5_180">
+                  <img class="product__item-img" src="./images/card/Масло 82,5 180 г_Молодчинка 1.png"
+                    alt="Масло сливочное традиционное 82,5%, 180г.">
+                  <div class="sticker">
+                    <img src="./images/card/sticker.svg" alt="">
+                    <span>82,5 %</span>
+                  </div>
+                  <span class="product__item-name">
+                    Масло сливочное традиционное 82,5%, 180г.
+                  </span>
+                  <p class="product__item-desc">
+                    Пастеризованные сливки. Пищевая ценность на 100г: жиры - 82,5г; белки – 0,6г; углеводы - 0,8г.
+                  </p>
+                  <span class="product__item-link link">
+                    <i class="icon-chevron-circle"></i>
+                    Подробнее
+                  </span>
+                </a>
+              </div>
+
+              <div class="catalog__item">
+                <a class="product__item" href="/maslo_82.5_430">
+                  <img class="product__item-img" src="./images/card/Масло 82,5 430 г_Молодчинка 1.png"
+                    alt="Масло сливочное традиционное 82,5%, 430г.">
+                  <div class="sticker">
+                    <img src="./images/card/sticker.svg" alt="">
+                    <span>82,5 %</span>
+                  </div>
+                  <span class="product__item-name">
+                    Масло сливочное традиционное 82,5%, 430г.
+                  </span>
+                  <p class="product__item-desc">
+                    Пастеризованные сливки. Пищевая ценность на 100г: жиры - 82,5г; белки – 0,6г; углеводы - 0,8г.
+                  </p>
+                  <span class="product__item-link link">
+                    <i class="icon-chevron-circle"></i>
+                    Подробнее
+                  </span>
+                </a>
+              </div>
+
+              <div class="catalog__item">
+                <a class="product__item" href="/maslo_k_72.5_180">
+                  <img class="product__item-img" src="./images/card/Масло крест 72,5 180 г_Молодчинка.png"
+                    alt="Масло сливочное крестьянское 72,5%, 180г.">
+                  <div class="sticker">
+                    <img src="./images/card/sticker.svg" alt="">
+                    <span>72,5 %</span>
+                  </div>
+                  <span class="product__item-name">
+                    Масло сливочное крестьянское 72,5%, 180г.
+                  </span>
+                  <p class="product__item-desc">
+                    Пастеризованные сливки. Пищевая ценность на 100г: жиры - 72,5г; белки – 1,0г; углеводы – 1,4г.
+                  </p>
+                  <span class="product__item-link link">
+                    <i class="icon-chevron-circle"></i>
+                    Подробнее
+                  </span>
+                </a>
+              </div>
+
+              <div class="catalog__item">
+                <a class="product__item" href="/maslo_k_72.5_430">
+                  <img class="product__item-img" src="./images/card/Масло крест 72,5 430 г_Молодчинка.png"
+                    alt="Масло сливочное крестьянское 72,5%, 180г.">
+                  <div class="sticker">
+                    <img src="./images/card/sticker.svg" alt="">
+                    <span>72,5 %</span>
+                  </div>
+                  <span class="product__item-name">
+                    Масло сливочное крестьянское 72,5%, 430г.
+                  </span>
+                  <p class="product__item-desc">
+                    Пастеризованные сливки. Пищевая ценность на 100г: жиры - 72,5г; белки – 1,0г; углеводы – 1,4г.
+                  </p>
+                  <span class="product__item-link link">
+                    <i class="icon-chevron-circle"></i>
+                    Подробнее
+                  </span>
+                </a>
+              </div>
+
+              <div class="catalog__item">
+                <a class="product__item" href="/maslo_82.5_20kg">
+                  <img class="product__item-img" src="./images/card/maslo_monolit.png"
+                    alt="Масло сливочное традиционное м.д.ж. 82,5%">
+                  <div class="sticker">
+                    <img src="./images/card/sticker.svg" alt="">
+                    <span>82,5 %</span>
+                  </div>
+                  <span class="product__item-name">
+                    Масло сливочное традиционное м.д.ж. 82,5%
+                  </span>
+                  <p class="product__item-desc">
+                    Монолит 20кг. ГОСТ 32261-2013
+                  </p>
+                  <span class="product__item-link link">
+                    <i class="icon-chevron-circle"></i>
+                    Подробнее
+                  </span>
+                </a>
+              </div>
+
+              <div class="catalog__item">
+                <a class="product__item" href="/maslo_82.5_5kg">
+                  <img class="product__item-img" src="./images/card/maslo_monolit.png"
+                    alt="Масло сливочное традиционное м.д.ж. 82,5%">
+                  <div class="sticker">
+                    <img src="./images/card/sticker.svg" alt="">
+                    <span>82,5 %</span>
+                  </div>
+                  <span class="product__item-name">
+                    Масло сливочное традиционное м.д.ж. 82,5%
+                  </span>
+                  <p class="product__item-desc">
+                    Монолит 5кг. ГОСТ 32261-2013
+                  </p>
+                  <span class="product__item-link link">
+                    <i class="icon-chevron-circle"></i>
+                    Подробнее
+                  </span>
+                </a>
+              </div>
+
+              <div class="catalog__item">
+                <a class="product__item" href="/maslo_k_82.5_20kg">
+                  <img class="product__item-img" src="./images/card/maslo_monolit.png"
+                    alt="Масло сливочное крестьянское м.д.ж. 72,5%">
+                  <div class="sticker">
+                    <img src="./images/card/sticker.svg" alt="">
+                    <span>72,5 %</span>
+                  </div>
+                  <span class="product__item-name">
+                    Масло сливочное крестьянское м.д.ж. 72,5%
+                  </span>
+                  <p class="product__item-desc">
+                    Монолит 20кг. ГОСТ 32261-2013
+                  </p>
+                  <span class="product__item-link link">
+                    <i class="icon-chevron-circle"></i>
+                    Подробнее
+                  </span>
+                </a>
+              </div>
+
+              <div class="catalog__item">
+                <a class="product__item" href="/maslo_k_82.5_5kg">
+                  <img class="product__item-img" src="./images/card/maslo_monolit.png"
+                    alt="Масло сливочное крестьянское м.д.ж. 72,5%">
+                  <div class="sticker">
+                    <img src="./images/card/sticker.svg" alt="">
+                    <span>72,5 %</span>
+                  </div>
+                  <span class="product__item-name">
+                    Масло сливочное крестьянское м.д.ж. 72,5%
+                  </span>
+                  <p class="product__item-desc">
+                    Монолит 5 кг. ГОСТ 32261-2013
+                  </p>
+                  <span class="product__item-link link">
+                    <i class="icon-chevron-circle"></i>
+                    Подробнее
+                  </span>
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--=include callback.html-->
+  </main>
+  <!--=include footer.html-->

@@ -1,0 +1,138 @@
+.card {
+
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &__block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 7.5rem;
+    background-color: var(--white);
+    position: relative;
+
+    &-img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    &-link {
+      position: absolute;
+      top: 4rem;
+      left: 4rem;
+      z-index: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 6rem;
+      height: 6rem;
+      border-radius: 50%;
+      border: 0.1rem solid var(--primary-white);
+      transform: scale(-1, -1);
+
+      i {
+        font-size: 1.44rem;
+        line-height: 100%;
+        color: var(--primary-color);
+      }
+    }
+
+    .filter__items {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 50%;
+      left: 4rem;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__brand {
+    max-width: 20.6rem;
+    position: absolute;
+    left: 4rem;
+    bottom: 4rem;
+    z-index: 1;
+
+    &-img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+
+  .sticker {
+    top: 4rem;
+    right: 4rem;
+    transform: rotate(17.43deg);
+  }
+
+  &__content {
+    margin-left: 7.4rem;
+    border-left: 0.1rem solid var(--primary-grey-20);
+  }
+
+  &__head {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    padding: 5rem 0 4rem 7rem;
+    border-bottom: 0.1rem solid var(--primary-grey-20);
+    .filter {
+      display: none;
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    padding: 2rem 0 4rem 7rem;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    position: relative;
+
+    &-title {
+      font-weight: 700;
+      font-size: 1.6rem;
+      line-height: 120%;
+    }
+
+    &-subtitle {
+      font-weight: 400;
+      font-size: 1.6rem;
+      line-height: 120%;
+    }
+
+    ul {}
+
+    li {
+      list-style-type: disc;
+      margin-left: 2.5rem;
+
+      &:not(:last-child) {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+
+  &__btn {
+    max-width: 32.5rem;
+    width: 100%;
+    min-width: unset;
+  }
+}

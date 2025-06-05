@@ -1,0 +1,136 @@
+.articles {
+  padding-top: 5rem;
+
+  &__container {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+  }
+
+  &__inner {
+    width: calc(100% - 47rem);
+  }
+
+  &__title {
+    margin-bottom: 4rem;
+  }
+
+  &__date {
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 110%;
+    color: rgba(66, 78, 103, 0.5);
+    margin-bottom: 3rem;
+  }
+
+  &__content {
+
+    .articles__text:first-child {
+      font-weight: 700;
+    }
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 120%;
+    margin-bottom: 3rem;
+
+    // &:not(:last-child) {
+    //   margin-bottom: 3rem;
+    // }
+  }
+
+  &__img {
+    width: auto;
+    height: 30rem;
+    object-fit: contain;
+    float: left;
+    margin: 0 3rem 3.5rem 0;
+  }
+
+  &__list {
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 130%;
+
+    &-title {
+      font-weight: 700;
+    }
+
+    li {
+      color: var(--primary-black);
+
+      &:not(:last-child) {
+        margin-bottom: 2rem;
+      }
+
+      a {
+        color: var(--primary-color);
+      }
+    }
+  }
+}
+
+.sidebar {
+  display: block;
+  width: 44rem;
+  height: fit-content;
+  padding: 5rem 3rem 4rem;
+  background-color: var(--white);
+
+  &__title {
+    margin-bottom: 4rem;
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 0.1rem solid var(--primary-grey-20);
+    font-size: 1.6rem;
+    line-height: 110%;
+    padding-bottom: 3rem;
+
+    &-link {
+      font-weight: 700;
+      text-decoration-line: underline;
+      color: var(--primary-color);
+      margin-bottom: 2rem;
+    }
+
+    &-text {
+      font-weight: 400;
+      color: var(--primary-black-50);
+      margin-bottom: 3rem;
+      max-width: 26.2rem;
+    }
+
+    &-wrap {
+      display: flex;
+      gap: 1rem;
+      color: var(--primary-accent);
+    }
+
+    &-count {
+      font-weight: 700;
+      font-size: 6rem;
+      line-height: 100%;
+    }
+
+    &-date {
+      font-weight: 400;
+      font-size: 1.2rem;
+      width: min-content;
+    }
+  }
+
+  .link i::before {
+    font-size: 3rem;
+  }
+}

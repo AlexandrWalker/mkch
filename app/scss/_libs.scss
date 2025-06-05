@@ -1,0 +1,38 @@
+.slider__btns {
+    display: flex;
+    gap: 1rem;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    position: static;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    margin: 0;
+}
+
+.swiper-button-prev::before,
+.swiper-button-next::before {
+    font-size: 1.5rem;
+    line-height: 100%;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    display: none;
+}
+
+.swiper-button-prev::before {
+    transform: scale(-1, -1);
+}
+
+.swiper-button-next.swiper-button-disabled,
+.swiper-button-prev.swiper-button-disabled {
+    opacity: 0.5;
+}
