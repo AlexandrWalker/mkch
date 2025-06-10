@@ -3151,6 +3151,20 @@ html.lenis body {
   flex-direction: column;
   gap: 6rem;
 }
+.quality__form p {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 100%;
+  text-align: center;
+  color: var(--primary-grey-sec);
+}
+.quality__form p a {
+  color: inherit;
+  text-decoration: underline;
+}
+.quality__form p a:hover {
+  color: var(--primary-color);
+}
 .quality__item {
   display: flex;
   flex-direction: column;
