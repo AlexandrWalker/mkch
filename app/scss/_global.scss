@@ -356,74 +356,6 @@ a {
   transition: all 0.3s ease;
 }
 
-.breadcrumb {
-  background-color: var(--white);
-  margin-bottom: 0;
-
-  &__container {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  &__inner {
-    padding: 1.5rem 0;
-  }
-
-  ul {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 0.3rem;
-    font-weight: 500;
-    font-size: 1.4rem;
-    line-height: 142.9%;
-    overflow-x: auto;
-
-    &::-webkit-scrollbar {
-      width: 0;
-      height: 0;
-      padding: 0;
-      margin: 0;
-    }
-  }
-
-  li {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 0.3rem;
-
-    &:last-child a {
-      pointer-events: none;
-    }
-
-    &:not(:last-child)::after {
-      content: "/";
-    }
-  }
-
-  a {
-    color: inherit;
-    white-space: nowrap;
-  }
-
-  .tabs__btns {
-    height: 100%;
-    gap: 0;
-  }
-
-  .tabs__btn {
-    border-radius: 0;
-    min-width: 11.2rem;
-    border: 0;
-
-    &.active {
-      background-color: var(--primary-accent);
-      color: var(--white);
-    }
-  }
-}
-
 html.lenis,
 html.lenis body {
   height: auto;
@@ -540,7 +472,7 @@ html.lenis body {
     gap: 2rem;
   }
 
-  &__btn {
+  &__btn:not(.btn, .dropdown__label) {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -581,13 +513,77 @@ html.lenis body {
   }
 }
 
-// .catalog__panel {
-//   display: none;
+.breadcrumb {
+  background-color: var(--white);
+  margin-bottom: 0;
 
-//   &--active {
-//     display: block;
-//   }
-// }
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__inner {
+    padding: 1.5rem 0;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.3rem;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 142.9%;
+    overflow-x: auto;
+
+    &::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.3rem;
+
+    &:last-child a {
+      pointer-events: none;
+    }
+
+    &:not(:last-child)::after {
+      content: "/";
+    }
+  }
+
+  a {
+    color: inherit;
+    white-space: nowrap;
+
+    &:hover {
+      color: var(--primary-color);
+    }
+  }
+
+  .tabs__btns {
+    height: 100%;
+    gap: 0;
+  }
+
+  .tabs__btn {
+    border-radius: 0;
+    min-width: 11.2rem;
+    border: 0;
+
+    &.active {
+      background-color: var(--primary-accent);
+      color: var(--white);
+    }
+  }
+}
 
 .accordion {
   cursor: pointer;

@@ -49,13 +49,13 @@
     color: var(--white);
     z-index: 1;
 
-    &-title {
+    p {
       font-weight: 700;
       font-size: 2rem;
       line-height: 110%;
     }
 
-    &-subtitle {
+    span {
       display: flex;
       align-items: center;
       gap: 0.5rem;
@@ -78,14 +78,14 @@
     gap: 5rem;
     width: 48rem;
 
-    &-title {
+    h2 {
       font-weight: 700;
       font-size: 4rem;
       line-height: 120%;
       color: var(--primary-color);
     }
 
-    &-text {
+    p {
       font-weight: 400;
       font-size: 1.6rem;
       line-height: 120%;
@@ -140,16 +140,26 @@
   &__slider {
     margin-bottom: 5rem;
 
-    &-item {}
+    &-item {
 
-    &-year {
-      display: block;
-      font-weight: 700;
-      font-size: 5rem;
-      line-height: 5.7rem;
-      opacity: 0.5;
-      margin-bottom: 4rem;
-      transition: all 0.3s ease;
+      p {
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 120%;
+        opacity: 0.5;
+        transition: all 0.3s ease;
+        max-width: 32.4rem;
+      }
+
+      h3 {
+        display: block;
+        font-weight: 700;
+        font-size: 5rem;
+        line-height: 5.7rem;
+        opacity: 0.5;
+        margin-bottom: 4rem;
+        transition: all 0.3s ease;
+      }
     }
 
     &-line {
@@ -192,19 +202,10 @@
         }
       }
     }
-
-    &-text {
-      font-weight: 400;
-      font-size: 1.6rem;
-      line-height: 120%;
-      opacity: 0.5;
-      transition: all 0.3s ease;
-      max-width: 32.4rem;
-    }
   }
 
   .swiper-slide-active {
-    .history__slider-year {
+    h3 {
       font-size: 8rem;
       color: var(--primary-accent);
       opacity: 1;
@@ -217,7 +218,7 @@
       }
     }
 
-    .history__slider-text {
+    p {
       opacity: 1;
     }
   }
@@ -238,6 +239,15 @@
       font-size: 1.6rem;
       line-height: 120%;
       text-align: center;
+
+      h6 {
+        font-weight: 700;
+        margin-bottom: 2rem;
+      }
+
+      p {
+        opacity: 0.5;
+      }
     }
 
     &-img {
@@ -245,15 +255,6 @@
       height: 10rem;
       object-fit: contain;
       margin-bottom: 9rem;
-    }
-
-    &-title {
-      font-weight: 700;
-      margin-bottom: 2rem;
-    }
-
-    &-text {
-      opacity: 0.5;
     }
   }
 }
@@ -351,6 +352,7 @@
     .swiper-slide {
       opacity: 0;
       visibility: hidden;
+      transition: all 0.3s ease;
     }
 
     .swiper-slide-active,
@@ -416,26 +418,8 @@
     justify-content: space-between;
     width: 56rem;
     padding: 8rem 0;
-  }
 
-  &__quote {
-    height: 100%;
-
-    &-icon {
-      width: auto;
-      height: 9.5rem;
-      object-fit: contain;
-      flex-shrink: 0;
-      margin-bottom: 5rem;
-    }
-
-    &-text {
-      font-weight: 700;
-      font-size: 4rem;
-      line-height: 120%;
-    }
-
-    &-author {
+    span {
       display: flex;
       flex-direction: column;
       gap: 2rem;
@@ -451,6 +435,24 @@
         line-height: 125%;
         color: var(--primary-white);
       }
+    }
+  }
+
+  &__quote {
+    height: 100%;
+
+    &-icon {
+      width: auto;
+      height: 9.5rem;
+      object-fit: contain;
+      flex-shrink: 0;
+      margin-bottom: 5rem;
+    }
+
+    p {
+      font-weight: 700;
+      font-size: 4rem;
+      line-height: 120%;
     }
   }
 

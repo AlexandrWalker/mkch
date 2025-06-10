@@ -17,8 +17,8 @@
     margin: 0;
 }
 
-.swiper-button-prev::before,
-.swiper-button-next::before {
+.swiper-button-prev i,
+.swiper-button-next i {
     font-size: 1.5rem;
     line-height: 100%;
 }
@@ -28,7 +28,7 @@
     display: none;
 }
 
-.swiper-button-prev::before {
+.swiper-button-prev i {
     transform: scale(-1, -1);
 }
 

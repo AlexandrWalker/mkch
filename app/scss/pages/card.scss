@@ -82,6 +82,17 @@
     gap: 4rem;
     padding: 5rem 0 4rem 7rem;
     border-bottom: 0.1rem solid var(--primary-grey-20);
+
+    h2 {
+      font-weight: 700;
+      font-size: 4rem;
+      line-height: 120%;
+
+      span {
+        color: var(--primary-accent);
+      }
+    }
+
     .filter {
       display: none;
     }
@@ -106,13 +117,13 @@
     gap: 2rem;
     position: relative;
 
-    &-title {
+    p {
       font-weight: 700;
       font-size: 1.6rem;
       line-height: 120%;
     }
 
-    &-subtitle {
+    span {
       font-weight: 400;
       font-size: 1.6rem;
       line-height: 120%;
@@ -134,5 +145,9 @@
     max-width: 32.5rem;
     width: 100%;
     min-width: unset;
+  }
+
+  .filter__item label {
+    background-color: var(--white);
   }
 }
