@@ -135,6 +135,17 @@
 
   &__slide {
     width: 47.2rem;
+
+    &--last {
+
+      .history__slider-line {
+        background: transparent;
+
+        span {
+          background: transparent;
+        }
+      }
+    }
   }
 
   &__slider {

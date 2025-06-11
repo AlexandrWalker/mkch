@@ -2707,6 +2707,12 @@ html.lenis body {
 .history__slide {
   width: 47.2rem;
 }
+.history__slide--last .history__slider-line {
+  background: transparent;
+}
+.history__slide--last .history__slider-line span {
+  background: transparent;
+}
 .history__slider {
   margin-bottom: 5rem;
 }
@@ -3282,6 +3288,9 @@ html.lenis body {
 @media (max-width: 1440px) {
   .footer__bottom-inner {
     padding: 1.6rem 0;
+  }
+  .news__head .btn {
+    --button-font-size: 1.4rem;
   }
 }
 @media (max-width: 768px) {
@@ -4714,6 +4723,13 @@ html.lenis body {
   .innerPage .news__item h6 {
     width: 100%;
   }
+  .about-page .news__head .btn {
+    --button-font-size: 1.2rem;
+    --button-height: 3rem;
+  }
+  .about-page .news__head {
+    flex-direction: row;
+  }
   /* vacancy */
   .vacancy__content {
     gap: 1rem;
@@ -4814,15 +4830,22 @@ html.lenis body {
     height: auto;
   }
   .about__presentation {
+    width: 17rem;
     height: 10rem;
     margin-top: -10rem;
     padding: 1rem;
+  }
+  .about__presentation p {
+    font-size: 1.2rem;
   }
   .about__content {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
     width: 100%;
+  }
+  .about__content h2 {
+    font-size: 1.6rem;
   }
   .about__content p {
     grid-column: 1/3;
