@@ -152,6 +152,8 @@
     margin-bottom: 5rem;
 
     &-item {
+      position: relative;
+      padding-top: 9.7rem;
 
       p {
         font-weight: 400;
@@ -170,6 +172,9 @@
         opacity: 0.5;
         margin-bottom: 4rem;
         transition: all 0.3s ease;
+        position: absolute;
+        top: 0;
+        left: 0;
       }
     }
 
@@ -216,8 +221,10 @@
   }
 
   .swiper-slide-active {
+
     h3 {
       font-size: 8rem;
+      // transform: scale(1.6);
       color: var(--primary-accent);
       opacity: 1;
     }

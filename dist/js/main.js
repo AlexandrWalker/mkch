@@ -302,6 +302,13 @@
           if (targetCatalog) {
             targetCatalog.classList.add('tabs__catalog--active');
           }
+
+          console.log(tabsBtn.dataset.tab);
+          if (tabsBtn.dataset.tab == 'b2b') {
+            tabsBtn.parentNode.parentNode.classList.add('filter__parent--active');
+          } else {
+            tabsBtn.parentNode.parentNode.classList.remove('filter__parent--active');
+          }
         });
       });
     };

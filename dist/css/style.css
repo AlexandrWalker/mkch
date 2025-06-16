@@ -2632,6 +2632,9 @@ html.lenis body {
   opacity: 1;
   height: auto;
 }
+.filter__parent--active div[data-tab=cream] {
+  display: none;
+}
 .filter__text {
   font-weight: 700;
   font-size: 1.6rem;
@@ -3519,6 +3522,10 @@ html.lenis body {
 .history__slider {
   margin-bottom: 5rem;
 }
+.history__slider-item {
+  position: relative;
+  padding-top: 9.7rem;
+}
 .history__slider-item p {
   font-weight: 400;
   font-size: 1.6rem;
@@ -3539,6 +3546,9 @@ html.lenis body {
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .history__slider-line {
   display: block;
@@ -5082,6 +5092,9 @@ html.lenis body {
   }
   .history__slide {
     width: 22rem;
+  }
+  .history__slider-item {
+    padding-top: 5rem;
   }
   .history__slider-item h3 {
     font-size: 2rem;

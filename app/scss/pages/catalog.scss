@@ -126,6 +126,16 @@
     }
   }
 
+  &__parent {
+
+    &--active {
+      
+      div[data-tab="cream"] {
+        display: none;
+      }
+    }
+  }
+
   &__text {
     font-weight: 700;
     font-size: 1.6rem;
