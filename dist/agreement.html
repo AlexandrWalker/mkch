@@ -21,6 +21,99 @@
 
 <body>
 <div class="wrapper">
+  <!-- Мобильное меню -->
+  <div id="menu" class="menu lenis" data-lenis-prevent>
+    <div class="menu__inner">
+      <button class="menu__close">
+        <span></span>
+      </button>
+      <div class="menu__body">
+        <ul class="menu__list">
+          <li class="menu__item accordion">
+            <div class="menu__item-head">
+              Продукция
+              <i class="icon-chevron-circle"></i>
+            </div>
+            <div class="menu__item-body">
+              <ul>
+                <li>asd</li>
+              </ul>
+            </div>
+          </li>
+          <li class="menu__item accordion">
+            <div class="menu__item-head">
+              О заводе
+              <i class="icon-chevron-circle"></i>
+            </div>
+            <div class="menu__item-body">
+              <ul>
+                <li>История</li>
+                <li>Производство</li>
+                <li>Сертификаты и лицензии</li>
+                <li>Вакансии</li>
+                <li>Пресс-центр</li>
+                <li>Контроль качества</li>
+              </ul>
+            </div>
+          </li>
+          <li class="menu__item accordion">
+            <div class="menu__item-head">
+              Партнерам
+              <i class="icon-chevron-circle"></i>
+            </div>
+            <div class="menu__item-body">
+              <ul>
+                <li>asd</li>
+              </ul>
+            </div>
+          </li>
+          <li class="menu__item accordion">
+            <div class="menu__item-head">
+              Где купить
+              <i class="icon-chevron-circle"></i>
+            </div>
+            <div class="menu__item-body">
+              <ul>
+                <li>asd</li>
+              </ul>
+            </div>
+          </li>
+          <li class="menu__item accordion">
+            <div class="menu__item-head">
+              Контакты
+              <i class="icon-chevron-circle"></i>
+            </div>
+            <div class="menu__item-body">
+              <ul>
+                <li>asd</li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="menu__foot">
+        <div class="menu__foot-wrap">
+          <a href="tel:+73832045980">8 (383) 204-59-80</a>
+          <p>
+            пн-пт с 8:00 до 19:00
+          </p>
+        </div>
+        <div class="menu__foot-wrap">
+          <span>Адрес:</span>
+          <p>
+            Новосибирская область, р. п. Чаны, ул. Ленина, 260.
+          </p>
+        </div>
+        <div class="menu__foot-wrap">
+          <span>Эл.почта:</span>
+          <a href="mailto:pochta@mail.ru">
+            pochta@mail.ru
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="menu__overlay"></div>
+  </div>
   <!-- Шапка сайта -->
   <header class="header">
     <div class="container header__container">
@@ -41,7 +134,7 @@
           <div class="header__info-item">
             <img src="./images/icon/icon-geo.svg" alt="">
             <p>
-              Новосибирская&nbsp;область, р.&nbsp;п.&nbsp;Чаны, ул.&nbsp;Ленина,&nbsp;260.
+              Новосибирская&nbsp;область, <br> р.&nbsp;п.&nbsp;Чаны, ул.&nbsp;Ленина,&nbsp;260.
             </p>
           </div>
           <div class="header__contact">
@@ -50,20 +143,18 @@
                 <img src="./images/icon/icon-phone.svg" alt="">
                 8 (383) 204-59-80
               </a>
-              <p>
-                пн-пт с&nbsp;8:00 до&nbsp;19:00
-              </p>
             </div>
-            <a class="header__contact-btn btn btn-yellow" href="/mkch">
+            <button class="header__contact-btn btn btn-yellow modal__btn" data-id="modal-callback">
               Связаться с нами
-            </a>
+            </button>
           </div>
         </div>
         <nav class="nav">
           <div class="search">
-            <button class="search__btn">
+            <button id="search__btn" class="search__btn">
               <i class="icon-search"></i>
             </button>
+            <input type="text" placeholder="Примерный запрос поиска на сайте">
           </div>
           <div class="nav__items">
             <div class="nav__item">
@@ -139,7 +230,7 @@
             </div>
           </div>
         </nav>
-        <button class="burger">
+        <button id="burger" class="burger">
         </button>
       </div>
     </div>
@@ -658,6 +749,80 @@
           <button class="btn btn-green" onclick="checkCookies()">
             Принять и&nbsp;закрыть
           </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Попап -->
+  <div class="modal lenis" id="modal-order" data-lenis-prevent>
+    <div class="modal__box">
+      <button class="modal__close-btn">
+      </button>
+      <div class="modal__content">
+        <div class="modal__head">
+          <h2>Заказать продукцию завода</h2>
+        </div>
+        <div class="modal__body">
+          <form action="#" method="get">
+            <div class="form-group">
+              <i class="icon-person"></i>
+              <input class="form-input" type="text" placeholder="Ваше имя" required>
+            </div>
+            <div class="form-group">
+              <i class="icon-mail"></i>
+              <input class="form-input" type="text" placeholder="Эл. почта" pattern="^\S+@\S+\.\S+$" minlength="2"
+                maxlength="40" required>
+            </div>
+            <div class="form-group">
+              <i class="icon-person"></i>
+              <input class="form-input" type="text" placeholder="Название компании" required>
+            </div>
+            <button class="form-btn btn btn-yellow">
+              Отправить
+            </button>
+            <div class="form-bottom">
+              <p>
+                Нажимая кнопку, вы даёте <a href="/mkch/policy.html">согласие на обработку ваших персональных данных</a>
+              </p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal lenis" id="modal-callback" data-lenis-prevent>
+    <div class="modal__box">
+      <button class="modal__close-btn">
+      </button>
+      <div class="modal__content">
+        <div class="modal__head">
+          <h2>Свяжитесь<br>
+            с&nbsp;нами</h2>
+        </div>
+        <div class="modal__body">
+          <form action="#" method="get">
+            <div class="form-group">
+              <i class="icon-person"></i>
+              <input class="form-input" type="text" placeholder="Ваше имя" required>
+            </div>
+            <div class="form-group">
+              <i class="icon-mail"></i>
+              <input class="form-input" type="text" placeholder="Эл. почта" pattern="^\S+@\S+\.\S+$" minlength="2"
+                maxlength="40" required>
+            </div>
+            <div class="form-group">
+              <i class="icon-person"></i>
+              <input class="form-input" type="text" placeholder="Название компании" required>
+            </div>
+            <button class="form-btn btn btn-yellow">
+              Отправить
+            </button>
+            <div class="form-bottom">
+              <p>
+                Нажимая кнопку, вы даёте <a href="/mkch/policy.html">согласие на обработку ваших персональных данных</a>
+              </p>
+            </div>
+          </form>
         </div>
       </div>
     </div>

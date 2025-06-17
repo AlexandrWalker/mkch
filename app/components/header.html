@@ -1,3 +1,5 @@
+<!-- Мобильное меню -->
+<!--=include menu.html-->
 <!-- Шапка сайта -->
 <header class="header">
   <div class="container header__container">
@@ -18,7 +20,7 @@
         <div class="header__info-item">
           <img src="./images/icon/icon-geo.svg" alt="">
           <p>
-            Новосибирская&nbsp;область, р.&nbsp;п.&nbsp;Чаны, ул.&nbsp;Ленина,&nbsp;260.
+            Новосибирская&nbsp;область, <br> р.&nbsp;п.&nbsp;Чаны, ул.&nbsp;Ленина,&nbsp;260.
           </p>
         </div>
         <div class="header__contact">
@@ -27,20 +29,18 @@
               <img src="./images/icon/icon-phone.svg" alt="">
               8 (383) 204-59-80
             </a>
-            <p>
-              пн-пт с&nbsp;8:00 до&nbsp;19:00
-            </p>
           </div>
-          <a class="header__contact-btn btn btn-yellow" href="/mkch">
+          <button class="header__contact-btn btn btn-yellow modal__btn" data-id="modal-callback">
             Связаться с нами
-          </a>
+          </button>
         </div>
       </div>
       <nav class="nav">
         <div class="search">
-          <button class="search__btn">
+          <button id="search__btn" class="search__btn">
             <i class="icon-search"></i>
           </button>
+          <input type="text" placeholder="Примерный запрос поиска на сайте">
         </div>
         <div class="nav__items">
           <div class="nav__item">
@@ -116,7 +116,7 @@
           </div>
         </div>
       </nav>
-      <button class="burger">
+      <button id="burger" class="burger">
       </button>
     </div>
   </div>

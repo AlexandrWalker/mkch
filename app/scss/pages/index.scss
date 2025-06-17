@@ -338,6 +338,21 @@
       width: min-content;
     }
 
+    &-download {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      font-weight: 700;
+      font-size: 1.6rem;
+      color: var(--white);
+
+      img {
+        width: 3.6rem;
+        height: 3.6rem;
+        object-fit: cover;
+      }
+    }
+
     &-wrap {
       display: flex;
       align-items: center;

@@ -68,15 +68,16 @@
 
     &-item {
       display: flex;
-      align-items: flex-start;
+      align-items: center;
       gap: 1rem;
-      max-width: 24rem;
       min-height: 4.4rem;
       position: relative;
 
+      p {}
+
       img {
-        width: 2rem;
-        height: 2rem;
+        width: 5rem;
+        height: 5rem;
         object-fit: cover;
       }
     }
@@ -89,9 +90,12 @@
 
     &-wrap {
       display: flex;
-      flex-direction: column;
-      align-items: flex-end;
+      align-items: center;
       gap: 0.5rem;
+      background-color: var(--white);
+      border-radius: 2.5rem;
+      padding: 0 1.2rem;
+      height: 5rem;
     }
 
     &-phone {
@@ -103,7 +107,6 @@
       text-transform: uppercase;
       color: inherit;
       position: relative;
-      margin-left: 3rem;
 
       &:hover {
         color: var(--primary-color);
@@ -111,11 +114,8 @@
       }
 
       img {
-        position: absolute;
-        top: 0;
-        left: -3rem;
-        width: 2rem;
-        height: 2rem;
+        width: 3.2rem;
+        height: 3.2rem;
         object-fit: cover;
       }
     }
@@ -130,13 +130,14 @@
 
 .nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   gap: 3rem;
   width: 100%;
   padding: 0 0 0 2rem;
   grid-column: 2/3;
   grid-row: 2/3;
+  position: relative;
 
   &__items {
     display: flex;
@@ -144,6 +145,7 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 1rem 5rem;
+    width: calc(100% - 8rem);
     height: 100%;
   }
 
@@ -252,6 +254,28 @@
 }
 
 .search {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  width: 6rem;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  padding: 0 0 0 2rem;
+  transition: all 0.3s ease;
+
+  &.search--show {
+    background-color: var(--white);
+    width: 144.7rem;
+
+    input {
+      width: 100%;
+    }
+  }
 
   &__btn {
     display: flex;
@@ -259,6 +283,12 @@
     align-items: center;
     width: 4rem;
     height: 4rem;
+    background: transparent;
+  }
+
+  input {
+    transition: all 0.3s ease;
+    width: 0;
     background: transparent;
   }
 
