@@ -173,6 +173,107 @@
       });
     }
 
+    /**
+     * Активация любого количества модальных окон
+     */
+    function modalFunc() {
+      var modal__btn = document.querySelector('.modal__btn');
+
+      if (!modal__btn) {
+        return;
+      } else {
+
+        var close = document.querySelectorAll('.modal__close-btn');
+        var openBtn = document.querySelectorAll('.modal__btn');
+
+        Array.from(openBtn, openButton => {
+          openButton.addEventListener('click', e => {
+
+            let open = document.getElementsByClassName('open');
+
+            if (open.length > 0 && open[0] !== this) {
+              open[0].classList.remove('open');
+            }
+
+            let modalId = e.target.getAttribute('data-id');
+            if (modalId) {
+              document.getElementById(modalId).classList.add('open');
+              document.body.classList.add('no-scroll');
+            } else {
+              return
+            }
+
+            Array.from(close, closeButton => {
+              closeButton.addEventListener('click', e => {
+                document.getElementById(modalId).classList.remove("open");
+                document.body.classList.remove('no-scroll');
+              });
+
+              window.addEventListener('keydown', (e) => {
+                if (e.key === "Escape") {
+                  document.getElementById(modalId).classList.remove("open")
+                  document.body.classList.remove('no-scroll');
+                }
+              });
+
+              document.querySelector(".modal.open .modal__box").addEventListener('click', event => {
+                event._isClickWithInModal = true;
+              });
+
+              document.getElementById(modalId).addEventListener('click', event => {
+                if (event._isClickWithInModal) return;
+                event.currentTarget.classList.remove('open');
+                document.body.classList.remove('no-scroll');
+              });
+            });
+          });
+        });
+      }
+    };
+
+    /**
+     * Управляет поведением меню-бургера.
+     */
+    function burgerNav() {
+      const burger = document.getElementById('burger');
+      const menu = document.getElementById('menu');
+      const closeButton = document.querySelector('.menu__close');
+      const overlay = document.querySelector('.menu__overlay');
+
+      /**
+       * Переключает видимость меню.
+       */
+      const toggleMenu = () => {
+        const isOpened = burger.classList.toggle('burger--opened');
+        menu.classList.toggle('menu--opened', isOpened);
+        lenis.stop();
+      };
+
+      /**
+       * Закрывает меню.
+       */
+      const closeMenu = () => {
+        burger.classList.remove('burger--opened');
+        menu.classList.remove('menu--opened');
+        lenis.start();
+      };
+
+      // Открытие/закрытие меню по клику на бургер
+      burger.addEventListener('click', toggleMenu);
+
+      // Закрытие меню по клику на кнопку закрытия или на overlay
+      [closeButton, overlay].forEach((element) => element.addEventListener('click', closeMenu));
+
+      // Закрытие меню при клике вне области меню и бургера
+      document.addEventListener('click', (event) => {
+        if (!menu.contains(event.target) && !burger.contains(event.target)) {
+          closeMenu();
+        }
+      });
+
+      document.querySelectorAll('.menu__list a').forEach((element) => element.addEventListener('click', closeMenu));
+    }
+
     const numbs = document.querySelector('.numbs');
     if (numbs) {
       function counter(array, time = 2000) {
@@ -200,6 +301,14 @@
             onStart: () => counter(numb),
           });
         });
+      });
+    }
+
+    const searchBtn = document.getElementById('search__btn');
+    if (searchBtn) {
+      searchBtn.addEventListener('click', function() {
+
+        searchBtn.parentNode.classList.toggle('search--show');
       });
     }
 
@@ -422,6 +531,8 @@
 
     accordionFunc();
     harmonicFunc();
+    modalFunc();
+    burgerNav();
     tabsFunc();
   });
 })();
