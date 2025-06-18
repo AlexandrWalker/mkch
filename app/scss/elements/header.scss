@@ -90,12 +90,24 @@
 
     &-wrap {
       display: flex;
-      align-items: center;
+      flex-direction: column;
       gap: 0.5rem;
       background-color: var(--white);
       border-radius: 2.5rem;
       padding: 0 1.2rem;
-      height: 5rem;
+      position: relative;
+      transition: all 0.3s ease;
+      transition-delay: 0.2s;
+
+      &:hover {
+        border-radius: 2.5rem 2.5rem 0 0;
+        transition-delay: 0s;
+        transition: all 0s;
+
+        .header__contact-content {
+          grid-template-rows: 1fr;
+        }
+      }
     }
 
     &-phone {
@@ -105,25 +117,108 @@
       font-weight: 800;
       font-size: 2rem;
       text-transform: uppercase;
-      color: inherit;
       position: relative;
-
-      &:hover {
-        color: var(--primary-color);
-        text-decoration: underline;
-      }
+      cursor: pointer;
+      height: 5rem;
 
       img {
         width: 3.2rem;
         height: 3.2rem;
         object-fit: cover;
       }
+
+      a {
+        color: inherit;
+
+        &:hover {
+          color: var(--primary-color);
+          text-decoration: underline;
+        }
+      }
+
+      i {
+        font-weight: 700;
+        font-size: 1rem;
+        color: var(--primary-color);
+        transform: rotate(90deg);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 2.2rem;
+        height: 2.2rem;
+        flex-shrink: 0;
+      }
     }
 
-    p {
-      font-weight: 400;
+    // p {
+    //   font-weight: 400;
+    //   font-size: 1.2rem;
+    //   color: var(--primary-grey);
+    // }
+
+    &-content {
+      display: grid;
+      grid-template-rows: 0fr;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      left: 0;
+      z-index: 1;
+      width: 100%;
+      background-color: var(--white);
+      border-radius: 0 0 2.5rem 2.5rem;
+    }
+
+    &-links {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      padding: 0 1rem;
+    }
+
+    &-link {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem 0;
+      color: inherit;
+
+      &:hover {
+
+        span {
+          text-decoration-line: underline;
+          color: var(--primary-accent);
+        }
+      }
+
+      i {
+        font-size: 3.2rem;
+      }
+
+      span {
+        transition: all 0.3s ease;
+      }
+
+      &:nth-child(3) {
+        padding-bottom: 2rem;
+        border-bottom: 0.1rem solid var(--primary-grey-20);
+      }
+    }
+
+    &-info {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      padding: 1rem 0 2rem;
       font-size: 1.2rem;
-      color: var(--primary-grey);
+
+      span {
+        color: var(--primary-black-50);
+      }
+
+      p {}
     }
   }
 }
@@ -284,12 +379,88 @@
     width: 4rem;
     height: 4rem;
     background: transparent;
+    flex-shrink: 0;
+  }
+
+  &__block {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    color: var(--white);
+    max-width: 74rem;
+    width: 100%;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+
+    &::after {
+      content: "";
+      display: block;
+      height: 3.3rem;
+      position: absolute;
+      top: -3.3rem;
+      left: 11.5rem;
+      border: 1.65rem solid transparent;
+      border-top: 1rem solid transparent;
+      border-bottom: 2.65rem solid var(--primary-color);
+    }
+
+    li {
+      background-color: var(--primary-color);
+      padding: 2rem 3rem;
+      width: 100%;
+      border: 0.1rem solid transparent;
+
+      &:not(:last-child) {
+        border-bottom: 0.1rem solid var(--white-10);
+      }
+    }
+
+    a {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 0.7rem;
+      color: inherit;
+
+      &:hover {
+        text-decoration-line: underline;
+      }
+    }
+
+    p {
+      max-width: 35rem;
+      white-space: nowrap;
+      overflow: hidden;
+      -o-text-overflow: ellipsis;
+      text-overflow: ellipsis;
+    }
+
+    span {
+      text-decoration-line: underline;
+    }
   }
 
   input {
-    transition: all 0.3s ease;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 100%;
     width: 0;
     background: transparent;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+
+    &:focus,
+    &:active {
+
+      &+.search__block {
+        opacity: 1;
+        pointer-events: all;
+      }
+    }
   }
 
   i {

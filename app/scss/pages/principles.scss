@@ -1,0 +1,170 @@
+.principles {
+  background-image: url(./../images/principles/cover.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 9rem;
+
+  &__inner {
+    display: flex;
+    flex-direction: row;
+    gap: 26rem;
+    color: var(--white);
+    padding: 13rem 0 19rem;
+  }
+
+  &__head {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    max-width: 57rem;
+    width: 100%;
+
+    h1 {
+      font-weight: 700;
+      font-size: 6rem;
+      line-height: 120%;
+    }
+
+    p {
+      color: var(--primary-white);
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    max-width: 34rem;
+    width: 100%;
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3rem;
+
+    img {
+      width: 8.8rem;
+      height: 8.8rem;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    &-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+
+      p {
+        line-height: 120%;
+      }
+
+      span {
+        font-weight: 700;
+        font-size: 4rem;
+        line-height: 110%;
+      }
+    }
+  }
+
+
+
+  &-feat {
+
+    &__inner {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 3rem;
+    }
+
+    &__block {
+      width: calc(50% - 1.5rem);
+
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+      }
+
+      &:nth-child(1) {
+        margin-top: -18rem;
+      }
+
+      &:nth-child(3) {
+        margin-top: -18rem;
+      }
+
+      &-wrap {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        padding: 5rem 3rem;
+        margin-top: -14.5rem;
+        margin-left: auto;
+        width: 44rem;
+        background-color: var(--primary-accent);
+        position: relative;
+        z-index: 1;
+
+        h3 {
+          font-weight: 700;
+          font-size: 3rem;
+          line-height: 110%;
+          color: var(--white);
+        }
+
+        p {
+          font-weight: 400;
+          font-size: 1.4rem;
+          line-height: 120%;
+          color: var(--primary-white);
+        }
+
+        &--blue {
+          background-color: var(--primary-color);
+        }
+
+        &--white {
+          background-color: var(--white);
+
+          h3,
+          p {
+            color: var(--primary-black);
+          }
+        }
+      }
+    }
+
+    &__desc {
+      width: calc(50% - 1.5rem);
+
+      h4 {
+        font-weight: 700;
+        font-size: 3rem;
+        line-height: 120%;
+        color: var(--primary-color);
+        margin-bottom: 3rem;
+      }
+
+      &-wrap {
+        column-count: 2;
+        column-gap: 3rem;
+
+        p {
+          font-weight: 400;
+          font-size: 1.4rem;
+          line-height: 120%;
+        }
+      }
+    }
+  }
+}

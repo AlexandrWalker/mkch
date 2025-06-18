@@ -260,6 +260,7 @@
         color: var(--white);
         transition: all 0.1s ease;
         opacity: 0;
+        min-width: 90rem;
       }
 
       p {
@@ -270,6 +271,7 @@
         transition: all 0.1s ease;
         max-width: 40.4rem;
         opacity: 0;
+        min-width: 90rem;
       }
     }
 
