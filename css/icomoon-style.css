@@ -1,18 +1,19 @@
 @font-face {
-  font-family: 'BY';
-  src:  url('./../fonts/icomoon/BY.eot?u1rx0m');
-  src:  url('./../fonts/icomoon/BY.eot?u1rx0m#iefix') format('embedded-opentype'),
-    url('./../fonts/icomoon/BY.ttf?u1rx0m') format('truetype'),
-    url('./../fonts/icomoon/BY.woff?u1rx0m') format('woff'),
-    url('./../fonts/icomoon/BY.svg?u1rx0m#BY') format('svg');
+  font-family: 'dwnld';
+  src: url('./../fonts/icomoon/dwnld.eot?sqn9h2');
+  src: url('./../fonts/icomoon/dwnld.eot?sqn9h2#iefix') format('embedded-opentype'),
+    url('./../fonts/icomoon/dwnld.ttf?sqn9h2') format('truetype'),
+    url('./../fonts/icomoon/dwnld.woff?sqn9h2') format('woff'),
+    url('./../fonts/icomoon/dwnld.svg?sqn9h2#dwnld') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
 }
 
-[class^="icon-"], [class*=" icon-"] {
+[class^="icon-"],
+[class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'BY' !important;
+  font-family: 'dwnld' !important;
   speak: never;
   font-style: normal;
   font-weight: normal;
@@ -28,15 +29,43 @@
 .icon-chevron-arrow:before {
   content: "\e900";
 }
+
 .icon-chevron-circle:before {
   content: "\e901";
 }
-.icon-search:before {
+
+.icon-download:before {
   content: "\e902";
 }
+
 .icon-mail:before {
-  content: "\e903";
-}
-.icon-person:before {
   content: "\e904";
+}
+
+.icon-mail-border:before {
+  content: "\e905";
+}
+
+.icon-main-download:before {
+  content: "\e906";
+}
+
+.icon-person:before {
+  content: "\e907";
+}
+
+.icon-play:before {
+  content: "\e908";
+}
+
+.icon-search:before {
+  content: "\e909";
+}
+
+.icon-telegram-border:before {
+  content: "\e90a";
+}
+
+.icon-whatsapp-border:before {
+  content: "\e90b";
 }
