@@ -158,6 +158,7 @@
         }
       });
     }
+    harmonicFunc();
 
     function accordionFunc() {
       var accordionHead = document.querySelectorAll('.accordion'),
@@ -169,9 +170,20 @@
             accordionActive[0].classList.remove('active');
           }
           this.classList.toggle('active');
+          console.log('ass');
+
+          if (document.getElementById('menu')) {
+            const menu = document.getElementById('menu');
+            if (menu.querySelector('.active')) {
+              menu.classList.add('menu-active');
+            } else {
+              menu.classList.remove('menu-active');
+            }
+          }
         });
       });
     }
+    accordionFunc();
 
     /**
      * Активация любого количества модальных окон
@@ -230,6 +242,7 @@
         });
       }
     };
+    modalFunc();
 
     /**
      * Управляет поведением меню-бургера.
@@ -255,6 +268,15 @@
       const closeMenu = () => {
         burger.classList.remove('burger--opened');
         menu.classList.remove('menu--opened');
+
+        const accordionActive = menu.getElementsByClassName('active');
+
+        if (accordionActive.length > 0 && accordionActive[0] !== this) {
+          accordionActive[0].classList.remove('active');
+        }
+
+        menu.classList.remove('menu-active');
+
         lenis.start();
       };
 
@@ -273,6 +295,7 @@
 
       document.querySelectorAll('.menu__list a').forEach((element) => element.addEventListener('click', closeMenu));
     }
+    burgerNav();
 
     const numbs = document.querySelector('.numbs');
     if (numbs) {
@@ -306,7 +329,7 @@
 
     const searchBtn = document.getElementById('search__btn');
     if (searchBtn) {
-      searchBtn.addEventListener('click', function() {
+      searchBtn.addEventListener('click', function () {
 
         searchBtn.parentNode.classList.toggle('search--show');
       });
@@ -421,6 +444,7 @@
         });
       });
     };
+    tabsFunc();
 
     /**
      * Выпадашка
@@ -477,6 +501,77 @@
       });
     }
 
+    window.addEventListener('resize', function () {
+
+      const headerPhone = document.getElementById('header-phone');
+
+      if (window.innerWidth <= 520) {
+        headerPhone.innerHTML = 'Связаться';
+      } else {
+        headerPhone.innerHTML = headerPhone.dataset.value;
+      }
+
+      const cookieBtn = document.getElementById('cookie-btn');
+
+      if (window.innerWidth <= 520) {
+        cookieBtn.innerHTML = 'Ок';
+      } else {
+        cookieBtn.innerHTML = 'Принять';
+      }
+
+      const productHeadDownload = document.querySelector('.product__head-download');
+
+      if (window.innerWidth <= 768) {
+        productHeadDownload.querySelector('span').innerHTML = 'Каталог продукции';
+      } else {
+        productHeadDownload.querySelector('span').innerHTML = productHeadDownload.querySelector('span').dataset.value;
+      }
+    });
+
+    /**
+     * Инициализация TransferElements
+     */
+    const madeLink = document.getElementById('made-link');
+    const roskachestvo = document.getElementById('roskachestvo');
+    const productDownload = document.querySelector('.product__head-download');
+
+    if (madeLink) {
+      new TransferElements(
+        {
+          sourceElement: madeLink,
+          breakpoints: {
+            768: {
+              targetElement: document.querySelector('.transfer-pos--1')
+            }
+          },
+        }
+      );
+    }
+    if (roskachestvo) {
+      new TransferElements(
+        {
+          sourceElement: roskachestvo,
+          breakpoints: {
+            768: {
+              targetElement: document.querySelector('.transfer-pos--2')
+            }
+          },
+        }
+      );
+    }
+    if (productDownload) {
+      new TransferElements(
+        {
+          sourceElement: productDownload,
+          breakpoints: {
+            768: {
+              targetElement: document.querySelector('.product__body')
+            }
+          },
+        }
+      );
+    }
+
     /**
      * Инициализация Lenis и ScrollTrigger
      */
@@ -529,11 +624,6 @@
       }
     }
 
-    accordionFunc();
-    harmonicFunc();
-    modalFunc();
-    burgerNav();
-    tabsFunc();
   });
 })();
 

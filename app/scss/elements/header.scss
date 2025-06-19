@@ -9,6 +9,15 @@
 }
 
 .header {
+  background-color: var(--primary-bg);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  height: 19.4rem;
+
+  box-shadow: 0px 7px 29.9px rgba(0, 0, 0, 0.15);
 
   &__inner {
     display: grid;
@@ -96,6 +105,7 @@
       border-radius: 2.5rem;
       padding: 0 1.2rem;
       position: relative;
+      z-index: 2;
       transition: all 0.3s ease;
       transition-delay: 0.2s;
 
@@ -128,10 +138,9 @@
       }
 
       a {
-        color: inherit;
+        color: var(--primary-color);
 
         &:hover {
-          color: var(--primary-color);
           text-decoration: underline;
         }
       }
@@ -248,6 +257,53 @@
     position: relative;
     cursor: pointer;
 
+    &--first {
+
+      h4 {
+        font-weight: 700;
+        font-size: 1.6rem;
+        line-height: 120%;
+        color: var(--primary-color);
+        padding: 3rem 3rem 1rem;
+
+        &:not(:first-child) {
+          padding-top: 2rem;
+          border-top: 0.1rem solid var(--primary-black-10);
+        }
+      }
+
+      .nav__list {
+
+        li {
+
+          &:hover {
+            background: transparent;
+
+            a span {
+              color: var(--primary-accent);
+              text-decoration-line: underline;
+            }
+          }
+        }
+
+        &-link {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          padding: 1rem 3rem;
+
+          &:hover {
+            background: transparent;
+          }
+
+          img {
+            width: 5rem;
+            height: 5rem;
+          }
+        }
+      }
+    }
+
     &-link {
       display: flex;
       align-items: center;
@@ -263,6 +319,18 @@
         line-height: 100%;
         color: var(--primary-grey);
       }
+
+      &:nth-child(1),
+      &:nth-child(2) {
+
+        span {
+          font-weight: 700;
+        }
+      }
+
+      &:hover {
+        color: var(--primary-accent);
+      }
     }
 
     &:hover {
@@ -273,6 +341,10 @@
       }
 
       .nav__item-link {
+
+        span {
+          color: var(--primary-accent);
+        }
 
         i {
           color: var(--primary-accent);
@@ -327,12 +399,13 @@
       transition: background-color 0.3s ease;
 
       &:hover {
-        background-color: var(--primary-accent);
-        color: var(--white);
+        // background-color: var(--primary-accent);
+        color: var(--primary-accent);
+        text-decoration-line: underline;
       }
 
       &:not(:last-child) {
-        border-bottom: 0.1rem solid var(--primary-black-10);
+        // border-bottom: 0.1rem solid var(--primary-black-10);
       }
     }
   }
@@ -487,7 +560,7 @@
     height: 0.2rem;
     background-color: var(--primary-black);
     position: relative;
-    top: -0.6rem;
+    top: -0.4rem;
   }
 
   &::after {
@@ -497,6 +570,6 @@
     height: 0.2rem;
     background-color: var(--primary-black);
     position: relative;
-    bottom: -0.6rem;
+    bottom: -0.4rem;
   }
 }

@@ -94,10 +94,11 @@
         border-radius: 50%;
         border: 0.1rem solid var(--primary-bg);
         color: var(--primary-color);
-        font-size: 0.5rem;
-        font-weight: 900;
+        font-weight: 700;
+        font-size: 0.8rem;
         transform: rotate(90deg);
         transition: all 0.3s ease;
+        flex-shrink: 0;
       }
     }
 

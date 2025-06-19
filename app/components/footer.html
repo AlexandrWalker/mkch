@@ -53,12 +53,12 @@
       </ul>
       <ul class="footer__list">
         <li class="footer__list-item">
-          <a class="footer__list-title" href="/mkch">
+          <a class="footer__list-title" href="/mkch/principles">
             Партнерам
           </a>
         </li>
         <li class="footer__list-item">
-          <a class="footer__list-title" href="/mkch">
+          <a class="footer__list-title" href="/mkch/buy">
             Где купить
           </a>
         </li>
@@ -71,6 +71,115 @@
           <a class="footer__list-title" href="/mkch/map">
             Карта сайта
           </a>
+        </li>
+      </ul>
+      <ul class="menu__list">
+        <li class="menu__item accordion">
+          <div class="menu__item-head">
+            Продукция
+            <i class="icon-chevron-circle"></i>
+          </div>
+          <div class="menu__item-body">
+            <ul>
+              <h4>
+                Для B2B
+              </h4>
+              <li>
+                <a href="/mkch">
+                  <img src="./images/menu/b2b-moloko.png" alt="">
+                  Сухое молоко
+                </a>
+              </li>
+              <li>
+                <a href="/mkch">
+                  <img src="./images/menu/b2b-maslo.png" alt="">
+                  Масло сливочное
+                </a>
+              </li>
+              <h4>
+                Для B2С
+              </h4>
+              <li>
+                <a href="/mkch">
+                  <img src="./images/menu/b2c-moloko.png" alt="">
+                  Молоко 
+                </a>
+              </li>
+              <li>
+                <a href="/mkch">
+                  <img src="./images/menu/b2c-smetana.png" alt="">
+                  Сметана 
+                </a>
+              </li>
+              <li>
+                <a href="/mkch">
+                  <img src="./images/menu/b2c-maslo.png" alt="">
+                  Масло сливочное
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="menu__item accordion">
+          <div class="menu__item-head">
+            О заводе
+            <i class="icon-chevron-circle"></i>
+          </div>
+          <div class="menu__item-body">
+            <ul>
+              <li>
+                <a href="/mkch/about">
+                  История
+                </a>
+              </li>
+              <li>
+                <a href="/mkch/quality">
+                  Производство
+                </a>
+              </li>
+              <li>
+                <a href="/mkch/certificates">
+                  Сертификаты и лицензии
+                </a>
+              </li>
+              <li>
+                <a href="/mkch/vacancy">
+                  Вакансии
+                </a>
+              </li>
+              <li>
+                <a href="/mkch/news">
+                  Пресс-центр
+                </a>
+              </li>
+              <li>
+                <a href="/mkch/quality">
+                  Контроль качества
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="menu__item accordion">
+          <div class="menu__item-head">
+            <a href="/mkch/principles">
+              Партнерам
+            </a>
+          </div>
+        </li>
+        <li class="menu__item accordion">
+          <div class="menu__item-head">
+            <a href="/mkch/buy">
+              Где купить
+            </a>
+          </div>
+        </li>
+        <li class="menu__item accordion">
+          <div class="menu__item-head">
+            <a href="/mkch/contacts">
+              Контакты
+            </a>
+          </div>
         </li>
       </ul>
       <div class="footer__contact">
@@ -90,14 +199,22 @@
             Новосибирская&nbsp;область, р.&nbsp;п.&nbsp;Чаны, ул.&nbsp;Ленина,&nbsp;260.
           </p>
         </div>
-        <img class="footer__contact-img" src="./images/main/logo-roskachestvo.svg" alt="">
+        <div class="footer__contact-wrap">
+          <h6>
+            Эл.почта:
+          </h6>
+          <a href="mailto:pochta@mail.ru">
+            pochta@mail.ru
+          </a>
+        </div>
+        <img id="roskachestvo" class="footer__contact-img" src="./images/main/logo-roskachestvo.svg" alt="">
       </div>
     </div>
   </div>
   <div class="footer__bottom">
     <div class="container">
       <div class="footer__bottom-inner">
-        <div class="footer__bottom-wrap">
+        <div class="footer__bottom-wrap transfer-pos--1">
           <p>
             © 2024 Маслодельный комбинат Чановский
           </p>
@@ -107,9 +224,10 @@
         <a class="footer__bottom-logo" href="/mkch">
           <img src="./images/logo/logo-grey.svg" alt="">
         </a>
-        <p>
-          <a href="https://1and2.ru/">Разработка и&nbsp;продвижение сайта&nbsp;&mdash; Once&amp;Twice</a>
-        </p>
+        <div class="footer__bottom-made transfer-pos--2">
+          <a id="made-link" href="https://1and2.ru/">Разработка и&nbsp;продвижение сайта&nbsp;&mdash;
+            Once&amp;Twice</a>
+        </div>
       </div>
     </div>
   </div>
@@ -125,6 +243,7 @@
 <script src="./libs/gsap/ScrollTrigger.min.js" defer></script>
 <script src="./libs/lenis/lenis.min.js" defer></script>
 <script src="./libs/swiper/swiper-bundle.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/transfer-elements@1.0.7/dist/transfer-elements.min.js"></script>
 <script src="./js/main.js" defer></script>
 </body>
 

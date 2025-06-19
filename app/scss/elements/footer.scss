@@ -27,6 +27,7 @@
     &-title {
       font-weight: 700;
       color: var(--white);
+      text-transform: uppercase;
     }
 
     &-link {
@@ -49,12 +50,22 @@
   &__contact {
     display: flex;
     flex-direction: column;
-    gap: 5rem;
+    // gap: 5rem;
+    gap: 3rem;
 
     &-wrap {
       display: flex;
       flex-direction: column;
       gap: 1rem;
+
+      a:not(.footer__contact-phone) {
+        color: var(--primary-white-50);
+        text-decoration-line: underline;
+
+        &:hover {
+          color: var(--primary-white);
+        }
+      }
     }
 
     &-phone {
@@ -81,7 +92,7 @@
     }
 
     &-img {
-      padding-top: 1rem;
+      padding-top: 2rem;
       width: 21.6rem;
       height: auto;
       object-fit: cover;
@@ -111,12 +122,11 @@
       a {
         font-weight: 400;
         font-size: 1.4rem;
-        color: inherit;
-        opacity: 0.5;
+        color: var(--primary-white-50);
         width: fit-content;
 
         &:hover {
-          opacity: 1;
+          color: var(--primary-white);
           text-decoration: underline;
         }
       }
@@ -126,7 +136,7 @@
       font-weight: 400;
       font-size: 1.4rem;
       line-height: 143%;
-      color: var(--primary-white);
+      color: var(--primary-white-50);
       white-space: nowrap;
 
       &:last-child {
@@ -154,5 +164,22 @@
         object-fit: cover;
       }
     }
+
+    &-made {
+      text-align: right;
+
+      a {
+        font-size: 1.4rem;
+        color: inherit;
+
+        &:hover {
+          text-decoration-line: underline;
+        }
+      }
+    }
+  }
+
+  .menu__list {
+    display: none;
   }
 }

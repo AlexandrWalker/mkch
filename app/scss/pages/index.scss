@@ -348,10 +348,17 @@
       font-size: 1.6rem;
       color: var(--white);
 
-      img {
-        width: 3.6rem;
-        height: 3.6rem;
-        object-fit: cover;
+      &:hover span {
+        text-decoration-line: underline;
+      }
+
+      i {
+        font-size: 3.6rem;
+        flex-shrink: 0;
+      }
+
+      span {
+        max-width: 18rem;
       }
     }
 
@@ -418,7 +425,7 @@
 
     &:hover {
 
-      .product__item-name {
+      h3 {
         text-decoration: underline;
       }
 
@@ -435,18 +442,19 @@
       width: 100%;
       height: auto;
       object-fit: cover;
-      margin-bottom: 3rem;
+      margin-bottom: 2rem;
     }
 
-    &-name {
+    h3 {
       font-weight: 700;
+      font-size: 2.4rem;
       color: var(--primary-color);
       margin-bottom: 2rem;
     }
 
     p {
-      font-size: 1.4rem;
-      margin-bottom: 4rem;
+      font-size: 1.6rem;
+      margin-bottom: 3rem;
     }
 
     &-link {
@@ -488,6 +496,7 @@
     p {
       font-weight: 400;
       line-height: 120%;
+      color: var(--primary-accent);
     }
 
     &-count {
@@ -582,18 +591,17 @@
   }
 
   &__form {
-    padding: 6rem 6rem 8rem;
+    padding: 7rem 6rem 13rem;
 
     h2 {
-      text-align: center;
-      margin-bottom: 8.4rem;
+      text-align: left;
+      margin-bottom: 5rem;
     }
 
     p {
       font-weight: 400;
       font-size: 1rem;
       line-height: 100%;
-      text-align: center;
       color: var(--primary-grey-sec);
 
       a {
@@ -610,7 +618,7 @@
   &__btn {
     width: 100%;
     min-width: unset;
-    margin: 4rem 0 1.5rem;
+    margin: 3rem 0 1rem;
   }
 
   &__wrap {
@@ -622,9 +630,9 @@
     height: 100%;
     object-fit: cover;
 
-    margin: -2rem;
-    width: calc(100% + 4rem);
-    height: calc(100% + 4rem);
+    margin: -4rem;
+    width: calc(100% + 8rem);
+    height: calc(100% + 8rem);
   }
 }
 

@@ -8,10 +8,11 @@
 
   &__block {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    gap: 7rem;
+    gap: 2rem;
+    width: fit-content;
     padding: 2rem;
+    margin-left: auto;
     background-color: var(--primary-bg);
     box-shadow: 0rem 0.7rem 3rem var(--black-15);
 
@@ -22,6 +23,10 @@
       &:hover {
         text-decoration: none;
       }
+    }
+
+    p {
+      white-space: nowrap;
     }
 
     .btn {

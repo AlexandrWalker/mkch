@@ -27,6 +27,17 @@
       <button class="menu__close">
         <span></span>
       </button>
+      <div class="menu__social">
+        <a href="https://wa.me/+73832045980">
+          <i class="icon-whatsapp-border"></i>
+        </a>
+        <a href="https://t.me/+73832045980">
+          <i class="icon-telegram-border"></i>
+        </a>
+        <a href="mailto:pochta@mail.ru">
+          <i class="icon-mail-border"></i>
+        </a>
+      </div>
       <div class="menu__body">
         <ul class="menu__list">
           <li class="menu__item accordion">
@@ -36,7 +47,42 @@
             </div>
             <div class="menu__item-body">
               <ul>
-                <li>asd</li>
+                <h4>
+                  Для B2B
+                </h4>
+                <li>
+                  <a href="/mkch">
+                    <img src="./images/menu/b2b-moloko.png" alt="">
+                    Сухое молоко
+                  </a>
+                </li>
+                <li>
+                  <a href="/mkch">
+                    <img src="./images/menu/b2b-maslo.png" alt="">
+                    Масло сливочное
+                  </a>
+                </li>
+                <h4>
+                  Для B2С
+                </h4>
+                <li>
+                  <a href="/mkch">
+                    <img src="./images/menu/b2c-moloko.png" alt="">
+                    Молоко 
+                  </a>
+                </li>
+                <li>
+                  <a href="/mkch">
+                    <img src="./images/menu/b2c-smetana.png" alt="">
+                    Сметана 
+                  </a>
+                </li>
+                <li>
+                  <a href="/mkch">
+                    <img src="./images/menu/b2c-maslo.png" alt="">
+                    Масло сливочное
+                  </a>
+                </li>
               </ul>
             </div>
           </li>
@@ -47,46 +93,58 @@
             </div>
             <div class="menu__item-body">
               <ul>
-                <li>История</li>
-                <li>Производство</li>
-                <li>Сертификаты и лицензии</li>
-                <li>Вакансии</li>
-                <li>Пресс-центр</li>
-                <li>Контроль качества</li>
+                <li>
+                  <a href="/mkch/about">
+                    История
+                  </a>
+                </li>
+                <li>
+                  <a href="/mkch/quality">
+                    Производство
+                  </a>
+                </li>
+                <li>
+                  <a href="/mkch/certificates">
+                    Сертификаты и лицензии
+                  </a>
+                </li>
+                <li>
+                  <a href="/mkch/vacancy">
+                    Вакансии
+                  </a>
+                </li>
+                <li>
+                  <a href="/mkch/news">
+                    Пресс-центр
+                  </a>
+                </li>
+                <li>
+                  <a href="/mkch/quality">
+                    Контроль качества
+                  </a>
+                </li>
               </ul>
             </div>
           </li>
           <li class="menu__item accordion">
             <div class="menu__item-head">
-              Партнерам
-              <i class="icon-chevron-circle"></i>
-            </div>
-            <div class="menu__item-body">
-              <ul>
-                <li>asd</li>
-              </ul>
+              <a href="/mkch/principles">
+                Партнерам
+              </a>
             </div>
           </li>
           <li class="menu__item accordion">
             <div class="menu__item-head">
-              Где купить
-              <i class="icon-chevron-circle"></i>
-            </div>
-            <div class="menu__item-body">
-              <ul>
-                <li>asd</li>
-              </ul>
+              <a href="/mkch/buy">
+                Где купить
+              </a>
             </div>
           </li>
           <li class="menu__item accordion">
             <div class="menu__item-head">
-              Контакты
-              <i class="icon-chevron-circle"></i>
-            </div>
-            <div class="menu__item-body">
-              <ul>
-                <li>asd</li>
-              </ul>
+              <a href="/mkch/contacts">
+                Контакты
+              </a>
             </div>
           </li>
         </ul>
@@ -132,7 +190,7 @@
         </a>
         <div class="header__info">
           <div class="header__info-item">
-            <img src="./images/icon/icon-geo.svg" alt="">
+            <img src="./images/icon/geo.svg" alt="">
             <p>
               Новосибирская&nbsp;область, <br> р.&nbsp;п.&nbsp;Чаны, ул.&nbsp;Ленина,&nbsp;260.
             </p>
@@ -140,28 +198,28 @@
           <div class="header__contact">
             <div class="header__contact-wrap">
               <div class="header__contact-phone">
-                <img src="./images/icon/icon-phone.svg" alt="">
-                <a href="tel:+73832045980">
+                <img src="./images/icon/phone.svg" alt="">
+                <a id="header-phone" href="tel:+73832045980" data-value="8 (383) 204-59-80">
                   8 (383) 204-59-80
                 </a>
                 <i class="icon-chevron-arrow"></i>
               </div>
               <div class="header__contact-content">
                 <div class="header__contact-links">
-                  <a class="header__contact-link" href="/">
-                    <i class="icon-mail"></i>
+                  <a class="header__contact-link" href="https://wa.me/+73832045980">
+                    <i class="icon-whatsapp-border"></i>
                     <span>
                       В WhatsApp
                     </span>
                   </a>
-                  <a class="header__contact-link" href="/">
-                    <i class="icon-mail"></i>
+                  <a class="header__contact-link" href="https://t.me/+73832045980">
+                    <i class="icon-telegram-border"></i>
                     <span>
                       В Telegram
                     </span>
                   </a>
-                  <a class="header__contact-link" href="/">
-                    <i class="icon-mail"></i>
+                  <a class="header__contact-link" href="mailto:pochta@mail.ru">
+                    <i class="icon-mail-border"></i>
                     <span>
                       Написать на почту
                     </span>
@@ -224,32 +282,53 @@
             </div>
           </div>
           <div class="nav__items">
-            <div class="nav__item">
+            <div class="nav__item nav__item--first">
               <a class="nav__item-link" href="/mkch/catalog">
-                Продукция
+                <span>Продукция</span>
                 <i class="icon-chevron-circle"></i>
               </a>
               <ul class="nav__list">
+                <h4>
+                  Для B2B
+                </h4>
                 <li>
                   <a class="nav__list-link" href="/mkch">
-                    Раздел меню
+                    <img src="./images/menu/b2b-moloko.png" alt="">
+                    <span>Сухое молоко</span>
                   </a>
                 </li>
                 <li>
                   <a class="nav__list-link" href="/mkch">
-                    Пункт меню
+                    <img src="./images/menu/b2b-maslo.png" alt="">
+                    <span>Масло сливочное</span>
+                  </a>
+                </li>
+                <h4>
+                  Для B2С
+                </h4>
+                <li>
+                  <a class="nav__list-link" href="/mkch">
+                    <img src="./images/menu/b2c-moloko.png" alt="">
+                    <span>Молоко </span>
                   </a>
                 </li>
                 <li>
                   <a class="nav__list-link" href="/mkch">
-                    Подраздел меню
+                    <img src="./images/menu/b2c-smetana.png" alt="">
+                    <span>Сметана </span>
+                  </a>
+                </li>
+                <li>
+                  <a class="nav__list-link" href="/mkch">
+                    <img src="./images/menu/b2c-maslo.png" alt="">
+                    <span>Масло сливочное</span>
                   </a>
                 </li>
               </ul>
             </div>
             <div class="nav__item">
               <a class="nav__item-link" href="/mkch/about">
-                О заводе
+                <span>О заводе</span>
                 <i class="icon-chevron-circle"></i>
               </a>
               <ul class="nav__list">
@@ -281,12 +360,12 @@
               </ul>
             </div>
             <div class="nav__item">
-              <a class="nav__item-link" href="/mkch">
+              <a class="nav__item-link" href="/mkch/principles">
                 Партнерам
               </a>
             </div>
             <div class="nav__item">
-              <a class="nav__item-link" href="/mkch">
+              <a class="nav__item-link" href="/mkch/buy">
                 Где купить
               </a>
             </div>
@@ -742,12 +821,12 @@
         </ul>
         <ul class="footer__list">
           <li class="footer__list-item">
-            <a class="footer__list-title" href="/mkch">
+            <a class="footer__list-title" href="/mkch/principles">
               Партнерам
             </a>
           </li>
           <li class="footer__list-item">
-            <a class="footer__list-title" href="/mkch">
+            <a class="footer__list-title" href="/mkch/buy">
               Где купить
             </a>
           </li>
@@ -760,6 +839,115 @@
             <a class="footer__list-title" href="/mkch/map">
               Карта сайта
             </a>
+          </li>
+        </ul>
+        <ul class="menu__list">
+          <li class="menu__item accordion">
+            <div class="menu__item-head">
+              Продукция
+              <i class="icon-chevron-circle"></i>
+            </div>
+            <div class="menu__item-body">
+              <ul>
+                <h4>
+                  Для B2B
+                </h4>
+                <li>
+                  <a href="/mkch">
+                    <img src="./images/menu/b2b-moloko.png" alt="">
+                    Сухое молоко
+                  </a>
+                </li>
+                <li>
+                  <a href="/mkch">
+                    <img src="./images/menu/b2b-maslo.png" alt="">
+                    Масло сливочное
+                  </a>
+                </li>
+                <h4>
+                  Для B2С
+                </h4>
+                <li>
+                  <a href="/mkch">
+                    <img src="./images/menu/b2c-moloko.png" alt="">
+                    Молоко 
+                  </a>
+                </li>
+                <li>
+                  <a href="/mkch">
+                    <img src="./images/menu/b2c-smetana.png" alt="">
+                    Сметана 
+                  </a>
+                </li>
+                <li>
+                  <a href="/mkch">
+                    <img src="./images/menu/b2c-maslo.png" alt="">
+                    Масло сливочное
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="menu__item accordion">
+            <div class="menu__item-head">
+              О заводе
+              <i class="icon-chevron-circle"></i>
+            </div>
+            <div class="menu__item-body">
+              <ul>
+                <li>
+                  <a href="/mkch/about">
+                    История
+                  </a>
+                </li>
+                <li>
+                  <a href="/mkch/quality">
+                    Производство
+                  </a>
+                </li>
+                <li>
+                  <a href="/mkch/certificates">
+                    Сертификаты и лицензии
+                  </a>
+                </li>
+                <li>
+                  <a href="/mkch/vacancy">
+                    Вакансии
+                  </a>
+                </li>
+                <li>
+                  <a href="/mkch/news">
+                    Пресс-центр
+                  </a>
+                </li>
+                <li>
+                  <a href="/mkch/quality">
+                    Контроль качества
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="menu__item accordion">
+            <div class="menu__item-head">
+              <a href="/mkch/principles">
+                Партнерам
+              </a>
+            </div>
+          </li>
+          <li class="menu__item accordion">
+            <div class="menu__item-head">
+              <a href="/mkch/buy">
+                Где купить
+              </a>
+            </div>
+          </li>
+          <li class="menu__item accordion">
+            <div class="menu__item-head">
+              <a href="/mkch/contacts">
+                Контакты
+              </a>
+            </div>
           </li>
         </ul>
         <div class="footer__contact">
@@ -779,14 +967,22 @@
               Новосибирская&nbsp;область, р.&nbsp;п.&nbsp;Чаны, ул.&nbsp;Ленина,&nbsp;260.
             </p>
           </div>
-          <img class="footer__contact-img" src="./images/main/logo-roskachestvo.svg" alt="">
+          <div class="footer__contact-wrap">
+            <h6>
+              Эл.почта:
+            </h6>
+            <a href="mailto:pochta@mail.ru">
+              pochta@mail.ru
+            </a>
+          </div>
+          <img id="roskachestvo" class="footer__contact-img" src="./images/main/logo-roskachestvo.svg" alt="">
         </div>
       </div>
     </div>
     <div class="footer__bottom">
       <div class="container">
         <div class="footer__bottom-inner">
-          <div class="footer__bottom-wrap">
+          <div class="footer__bottom-wrap transfer-pos--1">
             <p>
               © 2024 Маслодельный комбинат Чановский
             </p>
@@ -796,9 +992,10 @@
           <a class="footer__bottom-logo" href="/mkch">
             <img src="./images/logo/logo-grey.svg" alt="">
           </a>
-          <p>
-            <a href="https://1and2.ru/">Разработка и&nbsp;продвижение сайта&nbsp;&mdash; Once&amp;Twice</a>
-          </p>
+          <div class="footer__bottom-made transfer-pos--2">
+            <a id="made-link" href="https://1and2.ru/">Разработка и&nbsp;продвижение сайта&nbsp;&mdash;
+              Once&amp;Twice</a>
+          </div>
         </div>
       </div>
     </div>
@@ -810,11 +1007,10 @@
       <div class="cookie__inner">
         <div class="cookie__block">
           <p>
-            Этот сайт использует файлы <a href="/mkch/cookie.html">сооkіе</a> для хранения данных.
-            Продолжая использовать сайт, вы&nbsp;даете свое согласие на&nbsp;работу с&nbsp;этими файлами.
+            Этот сайт использует файлы <a href="/mkch/cookie.html">сооkіе</a>
           </p>
-          <button class="btn btn-green" onclick="checkCookies()">
-            Принять и&nbsp;закрыть
+          <button id="cookie-btn" class="btn btn-green" onclick="checkCookies()">
+            Принять
           </button>
         </div>
       </div>
@@ -849,7 +1045,8 @@
             </button>
             <div class="form-bottom">
               <p>
-                Нажимая кнопку, вы даёте <a href="/mkch/policy.html">согласие на обработку ваших персональных данных</a>
+                Нажимая кнопку «Отправить», я согласен с&nbsp;<a href="/mkch/policy.html">обработкой персональных
+                  данных</a> и с&nbsp;<a href="/mkch/agreement.html">пользовательским соглашением</a>
               </p>
             </div>
           </form>
@@ -857,6 +1054,7 @@
       </div>
     </div>
   </div>
+  
   <div class="modal lenis" id="modal-callback" data-lenis-prevent>
     <div class="modal__box">
       <button class="modal__close-btn">
@@ -870,23 +1068,24 @@
           <form action="#" method="get">
             <div class="form-group">
               <i class="icon-person"></i>
-              <input class="form-input" type="text" placeholder="Ваше имя" required>
+              <input class="form-input" name="names" type="text" placeholder="Ваше имя" required>
             </div>
             <div class="form-group">
               <i class="icon-mail"></i>
-              <input class="form-input" type="text" placeholder="Эл. почта" pattern="^\S+@\S+\.\S+$" minlength="2"
-                maxlength="40" required>
+              <input class="form-input" name="mail" type="email" placeholder="Эл. почта" pattern="^\S+@\S+\.\S+$"
+                minlength="2" maxlength="40" required>
             </div>
             <div class="form-group">
               <i class="icon-person"></i>
-              <input class="form-input" type="text" placeholder="Название компании" required>
+              <input class="form-input" name="company-name" type="text" placeholder="Название компании" required>
             </div>
             <button class="form-btn btn btn-yellow">
               Отправить
             </button>
             <div class="form-bottom">
               <p>
-                Нажимая кнопку, вы даёте <a href="/mkch/policy.html">согласие на обработку ваших персональных данных</a>
+                Нажимая кнопку «Отправить», я согласен с&nbsp;<a href="/mkch/policy.html">обработкой персональных
+                  данных</a> и с&nbsp;<a href="/mkch/agreement.html">пользовательским соглашением</a>
               </p>
             </div>
           </form>
@@ -900,6 +1099,7 @@
   <script src="./libs/gsap/ScrollTrigger.min.js" defer></script>
   <script src="./libs/lenis/lenis.min.js" defer></script>
   <script src="./libs/swiper/swiper-bundle.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/transfer-elements@1.0.7/dist/transfer-elements.min.js"></script>
   <script src="./js/main.js" defer></script>
   </body>
   
