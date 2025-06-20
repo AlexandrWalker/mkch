@@ -1272,10 +1272,14 @@
     // padding-top: 5rem;
   }
 
+  .history__slider-count {
+    height: 2rem;
+    margin-bottom: 3rem;
+  }
+
   .history__slider-item h3 {
     font-size: 2rem;
     line-height: 2rem;
-    margin-bottom: 3rem;
   }
 
   .history .swiper-slide-active .history__slider-item h3 {
