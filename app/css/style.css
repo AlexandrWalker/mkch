@@ -704,7 +704,7 @@ html.lenis body {
   top: 19.4rem;
   left: 0;
   right: 0;
-  z-index: 100;
+  z-index: 99;
 }
 .breadcrumb__container {
   display: flex;
@@ -908,7 +908,7 @@ html.lenis body {
   border-radius: 2.5rem;
   padding: 0 1.2rem;
   position: relative;
-  z-index: 2;
+  z-index: 102;
   transition: all 0.3s ease;
   transition-delay: 0.2s;
 }
@@ -919,6 +919,9 @@ html.lenis body {
 }
 .header__contact-wrap:hover .header__contact-content {
   grid-template-rows: 1fr;
+}
+.header__contact-wrap:hover .header__contact-phone i {
+  transform: rotate(270deg);
 }
 .header__contact-phone {
   display: flex;
@@ -953,6 +956,7 @@ html.lenis body {
   width: 2.2rem;
   height: 2.2rem;
   flex-shrink: 0;
+  transition: all 0.3s ease;
 }
 .header__contact-content {
   display: grid;
@@ -1158,7 +1162,7 @@ html.lenis body {
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 3;
+  z-index: 101;
   padding: 0 0 0 2rem;
   transition: all 0.3s ease;
 }
@@ -1182,6 +1186,7 @@ html.lenis body {
   position: absolute;
   top: 100%;
   left: 0;
+  z-index: 101;
   color: var(--white);
   max-width: 74rem;
   width: 100%;
@@ -4432,6 +4437,7 @@ html.lenis body {
     padding: 0;
     margin-left: 0;
     border-radius: 2.5rem;
+    z-index: 103;
   }
   .search.search--show {
     width: calc(100dvw - 20rem - 4rem - 7.3rem - 7.4rem);
