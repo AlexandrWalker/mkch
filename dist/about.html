@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="./libs/lenis/lenis.min.css">
   <link rel="stylesheet" href="./libs/swiper/swiper-bundle.min.css">
   <link rel="stylesheet" href="./css/icomoon-style.css">
+  <link rel="stylesheet" href="./libs/fancybox/jquery.fancybox.min.css">
   <link rel="stylesheet" href="./css/style.css">
 </head>
 
@@ -51,13 +52,13 @@
                   Для B2B
                 </h4>
                 <li>
-                  <a href="/mkch">
+                  <a href="/mkch/catalog">
                     <img src="./images/menu/b2b-moloko.png" alt="">
                     Сухое молоко
                   </a>
                 </li>
                 <li>
-                  <a href="/mkch">
+                  <a href="/mkch/catalog">
                     <img src="./images/menu/b2b-maslo.png" alt="">
                     Масло сливочное
                   </a>
@@ -66,19 +67,19 @@
                   Для B2С
                 </h4>
                 <li>
-                  <a href="/mkch">
+                  <a href="/mkch/catalog">
                     <img src="./images/menu/b2c-moloko.png" alt="">
                     Молоко 
                   </a>
                 </li>
                 <li>
-                  <a href="/mkch">
+                  <a href="/mkch/catalog">
                     <img src="./images/menu/b2c-smetana.png" alt="">
                     Сметана 
                   </a>
                 </li>
                 <li>
-                  <a href="/mkch">
+                  <a href="/mkch/catalog">
                     <img src="./images/menu/b2c-maslo.png" alt="">
                     Масло сливочное
                   </a>
@@ -292,13 +293,13 @@
                   Для B2B
                 </h4>
                 <li>
-                  <a class="nav__list-link" href="/mkch">
+                  <a class="nav__list-link" href="/mkch/catalog">
                     <img src="./images/menu/b2b-moloko.png" alt="">
                     <span>Сухое молоко</span>
                   </a>
                 </li>
                 <li>
-                  <a class="nav__list-link" href="/mkch">
+                  <a class="nav__list-link" href="/mkch/catalog">
                     <img src="./images/menu/b2b-maslo.png" alt="">
                     <span>Масло сливочное</span>
                   </a>
@@ -307,19 +308,19 @@
                   Для B2С
                 </h4>
                 <li>
-                  <a class="nav__list-link" href="/mkch">
+                  <a class="nav__list-link" href="/mkch/catalog">
                     <img src="./images/menu/b2c-moloko.png" alt="">
                     <span>Молоко </span>
                   </a>
                 </li>
                 <li>
-                  <a class="nav__list-link" href="/mkch">
+                  <a class="nav__list-link" href="/mkch/catalog">
                     <img src="./images/menu/b2c-smetana.png" alt="">
                     <span>Сметана </span>
                   </a>
                 </li>
                 <li>
-                  <a class="nav__list-link" href="/mkch">
+                  <a class="nav__list-link" href="/mkch/catalog">
                     <img src="./images/menu/b2c-maslo.png" alt="">
                     <span>Масло сливочное</span>
                   </a>
@@ -413,6 +414,15 @@
             <div class="about__block">
               <div class="about__wrap">
                 <img class="about__img" src="./images/about/cover.png" alt="">
+                <a class="video__link" href="#!" data-rel="media">
+                  <span class="video__link-icon">
+                    <i class="icon-play"></i>
+                  </span>
+                  <span class="video__link-text">
+                    Смотреть <br />
+                    видео о&nbsp;заводе
+                  </span>
+                </a>
               </div>
               <a class="about__presentation" href="#!" download="presentation">
                 <p>
@@ -434,15 +444,6 @@
                 и&nbsp;богатый опыт новая модель организационной деятельности играет важную роль в&nbsp;формировании
                 существенных финансовых и&nbsp;административных условий.
               </p>
-              <div class="video__link">
-                <span class="video__link-icon">
-                  <img src="./images/icon/play.svg" alt="">
-                </span>
-                <span class="video__link-text">
-                  Смотреть <br />
-                  видео о&nbsp;заводе
-                </span>
-              </div>
             </div>
           </div>
         </div>
@@ -641,28 +642,37 @@
                 <i class="icon-chevron-arrow"></i>
               </div>
               <div class="swiper-wrapper">
-                <div class="swiper-slide">
+                <div class="values__slide swiper-slide">
                   <div class="values__slider-item">
                     <img class="values__slider-img" src="./images/about/values-1.png" alt="">
                     <h6 class="values__slider-title">
                       Качество
                     </h6>
+                    <span>
+                      Первая ценность
+                    </span>
                   </div>
                 </div>
-                <div class="swiper-slide">
+                <div class="values__slide swiper-slide">
                   <div class="values__slider-item">
                     <img class="values__slider-img" src="./images/about/cover.png" alt="">
                     <h6 class="values__slider-title">
                       Качество
                     </h6>
+                    <span>
+                      Вторая ценность
+                    </span>
                   </div>
                 </div>
-                <div class="swiper-slide">
+                <div class="values__slide swiper-slide">
                   <div class="values__slider-item">
                     <img class="values__slider-img" src="./images/about/values-1.png" alt="">
                     <h6 class="values__slider-title">
                       Качество
                     </h6>
+                    <span>
+                      Третья ценность
+                    </span>
                   </div>
                 </div>
               </div>
@@ -678,7 +688,8 @@
             <blockquote class="mission__quote">
               <img class="mission__quote-icon" src="./images/about/quote.svg" alt="">
               <p>
-                Примерная цитата или фраза о&nbsp;заводе от&nbsp;руководителя, что-то пафосное и&nbsp;важное о&nbsp;том как все хорошо
+                Примерная цитата или фраза о&nbsp;заводе от&nbsp;руководителя, что-то пафосное и&nbsp;важное о&nbsp;том
+                как все хорошо
               </p>
             </blockquote>
             <span>
@@ -686,7 +697,8 @@
               Владимир Владимирович
             </span>
           </div>
-          <div class="mission__photo" data-animation="parallax-img">
+          <!-- <div class="mission__photo" data-animation="parallax-img"> -->
+          <div class="mission__photo">
             <img class="mission__photo-img" src="./images/about/photo.png" alt="">
           </div>
         </div>
@@ -960,13 +972,13 @@
                   Для B2B
                 </h4>
                 <li>
-                  <a href="/mkch">
+                  <a href="/mkch/catalog">
                     <img src="./images/menu/b2b-moloko.png" alt="">
                     Сухое молоко
                   </a>
                 </li>
                 <li>
-                  <a href="/mkch">
+                  <a href="/mkch/catalog">
                     <img src="./images/menu/b2b-maslo.png" alt="">
                     Масло сливочное
                   </a>
@@ -975,19 +987,19 @@
                   Для B2С
                 </h4>
                 <li>
-                  <a href="/mkch">
+                  <a href="/mkch/catalog">
                     <img src="./images/menu/b2c-moloko.png" alt="">
                     Молоко 
                   </a>
                 </li>
                 <li>
-                  <a href="/mkch">
+                  <a href="/mkch/catalog">
                     <img src="./images/menu/b2c-smetana.png" alt="">
                     Сметана 
                   </a>
                 </li>
                 <li>
-                  <a href="/mkch">
+                  <a href="/mkch/catalog">
                     <img src="./images/menu/b2c-maslo.png" alt="">
                     Масло сливочное
                   </a>
@@ -1207,6 +1219,8 @@
   <script src="./libs/lenis/lenis.min.js" defer></script>
   <script src="./libs/swiper/swiper-bundle.min.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/transfer-elements@1.0.7/dist/transfer-elements.min.js"></script>
+  <script src="./libs/jquery/jquery.min.js"></script>
+  <script src="./libs/fancybox/jquery.fancybox.min.js"></script>
   <script src="./js/main.js" defer></script>
   </body>
   

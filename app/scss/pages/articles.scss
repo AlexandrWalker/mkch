@@ -9,6 +9,21 @@
 
   &__inner {
     width: calc(100% - 47rem);
+
+    .link {
+      margin-bottom: 2rem;
+      line-height: 1;
+
+      i {
+        transform: scale(-1, -1);
+
+        &::before {
+          width: 1.6rem;
+          height: 1.6rem;
+          font-size: 1.6rem;
+        }
+      }
+    }
   }
 
   &__title {
@@ -67,6 +82,10 @@
 
       a {
         color: var(--primary-color);
+
+        &:hover {
+          text-decoration-line: underline;
+        }
       }
     }
   }
@@ -133,6 +152,10 @@
   }
 
   .link i::before {
-    font-size: 3rem;
+
+    // font-size: 3rem;
+    width: 1.6rem;
+    height: 1.6rem;
+    font-size: 1.6rem;
   }
 }

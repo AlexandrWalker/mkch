@@ -28,6 +28,7 @@
 
   &__wrap {
     overflow: hidden;
+    position: relative;
   }
 
   &__img {
@@ -101,6 +102,17 @@
     gap: 2rem;
     color: inherit;
     cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    &:hover {
+
+      .video__link-text {
+        text-decoration-line: underline;
+      }
+    }
 
     &-icon {
       display: flex;
@@ -109,7 +121,14 @@
       width: 8.5rem;
       height: 8.5rem;
       border-radius: 50%;
-      border: 0.1rem solid var(--primary-black-30);
+      background-color: var(--white);
+      transition: all 0.3s ease;
+
+      i {
+        font-size: 2.2rem;
+        color: var(--primary-red);
+        transition: all 0.3s ease;
+      }
 
       img {
         width: 1.875rem;
@@ -123,6 +142,7 @@
       font-weight: 400;
       font-size: 1.6rem;
       line-height: 125%;
+      color: var(--white);
     }
   }
 }
@@ -347,6 +367,19 @@
       justify-content: flex-end;
       align-items: flex-end;
       position: relative;
+
+      span {
+        display: none;
+        position: absolute;
+        bottom: -0.8rem;
+        left: -0.4rem;
+        z-index: 1;
+        width: min-content;
+        font-weight: 700;
+        font-size: 4rem;
+        line-height: 110%;
+        color: var(--white);
+      }
     }
 
     &-img {
