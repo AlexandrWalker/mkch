@@ -2714,6 +2714,9 @@ html.lenis body {
 .filter__parent--active div[data-tab=cream] {
   display: none;
 }
+.filter__parent--active .dropdown__option.cream {
+  display: none;
+}
 .filter__text {
   font-weight: 700;
   font-size: 1.6rem;
@@ -2978,10 +2981,8 @@ html.lenis body {
   line-height: 100%;
   color: var(--primary-color-50);
 }
-.certif__item-icon {
-  width: 1.3rem;
-  height: 1.3rem;
-  object-fit: contain;
+.certif__item i {
+  font-size: 1.3rem;
   flex-shrink: 0;
 }
 
@@ -3118,8 +3119,12 @@ html.lenis body {
 .vacancy__item-img {
   width: 5rem;
   height: 5rem;
-  object-fit: contain;
   flex-shrink: 0;
+}
+.vacancy__item-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 .vacancy__item-bottom {
   display: flex;
@@ -3902,7 +3907,7 @@ html.lenis body {
 }
 .quality__form p {
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 1.4rem;
   line-height: 100%;
   text-align: center;
   color: var(--primary-grey-sec);
@@ -3983,7 +3988,6 @@ html.lenis body {
 .quality .callback__text {
   margin-top: -2.5rem;
 }
-
 .buy {
   color: var(--primary-white);
   background-color: var(--primary-color);
@@ -5423,6 +5427,9 @@ html.lenis body {
   .quality__head-btn {
     display: none;
   }
+  .innerPage .title.quality__head-title {
+    font-size: 2rem;
+  }
   .quality__body {
     margin-top: -5rem;
     padding: 3rem;
@@ -5434,7 +5441,7 @@ html.lenis body {
     font-size: 1.2rem;
   }
   .quality__list li {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
   .quality__form {
     gap: 3rem;
@@ -5456,7 +5463,7 @@ html.lenis body {
   }
   .quality__table th,
   .quality__table td {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     padding: 0.75rem 0;
   }
   .quality__item-wrap {
@@ -5984,9 +5991,6 @@ html.lenis body {
   .news__item {
     height: 15.8rem;
   }
-  .news__item h6 {
-    font-size: 1.2rem;
-  }
   .news__item-date {
     font-size: 1rem;
   }
@@ -6103,6 +6107,9 @@ html.lenis body {
     gap: 1rem;
     margin-bottom: 1rem;
   }
+  .catalog__all-products {
+    width: 100%;
+  }
   .filter {
     width: 100%;
   }
@@ -6211,11 +6218,11 @@ html.lenis body {
   }
   .innerPage .news__item:nth-child(1) .news__item-date,
   .innerPage .news__item .news__item-date {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
   .innerPage .news__item:nth-child(1) .news__item-count,
   .innerPage .news__item .news__item-count {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
   .innerPage .news__item h6 {
     width: 100%;

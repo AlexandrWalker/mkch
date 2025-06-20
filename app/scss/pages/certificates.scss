@@ -64,10 +64,8 @@
       color: var(--primary-color-50);
     }
 
-    &-icon {
-      width: 1.3rem;
-      height: 1.3rem;
-      object-fit: contain;
+    i {
+      font-size: 1.3rem;
       flex-shrink: 0;
     }
   }

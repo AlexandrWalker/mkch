@@ -1410,6 +1410,10 @@
     display: none;
   }
 
+  .innerPage .title.quality__head-title {
+    font-size: 2rem;
+  }
+
   .quality__body {
     margin-top: -5rem;
     padding: 3rem;
@@ -1424,7 +1428,7 @@
   }
 
   .quality__list li {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
 
   .quality__form {
@@ -1453,7 +1457,7 @@
 
   .quality__table th,
   .quality__table td {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     padding: 0.75rem 0;
   }
 
@@ -2134,10 +2138,6 @@
     height: 15.8rem;
   }
 
-  .news__item h6 {
-    font-size: 1.2rem;
-  }
-
   .news__item-date {
     font-size: 1rem;
   }
@@ -2284,6 +2284,10 @@
     margin-bottom: 1rem;
   }
 
+  .catalog__all-products {
+    width: 100%;
+  }
+
   .filter {
     width: 100%;
   }
@@ -2418,12 +2422,12 @@
 
   .innerPage .news__item:nth-child(1) .news__item-date,
   .innerPage .news__item .news__item-date {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 
   .innerPage .news__item:nth-child(1) .news__item-count,
   .innerPage .news__item .news__item-count {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 
   .innerPage .news__item h6 {
@@ -2741,8 +2745,7 @@
     width: 100%;
   }
 
-  .buy__item h3 {
-  }
+  .buy__item h3 {}
 
   .buy__item li {
     margin-bottom: 1.5rem;

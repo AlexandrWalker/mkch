@@ -60,6 +60,9 @@
       speed: 600,
       loop: true,
       watchSlidesProgress: true,
+      mousewheel: {
+        forceToAxis: true,
+      },
       pagination: {
         el: ".swiper-pagination",
         type: "fraction",
@@ -79,6 +82,9 @@
       speed: 600,
       loop: true,
       grabCursor: true,
+      mousewheel: {
+        forceToAxis: true,
+      },
       navigation: {
         prevEl: ".swiper-button-prev",
         nextEl: ".swiper-button-next",
