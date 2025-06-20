@@ -24,7 +24,7 @@
       padding: 0;
 
       &:hover {
-        background-color: var(--primary-accent);
+        background-color: var(--primary-color);
         color: var(--white);
       }
 
@@ -39,7 +39,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
   }
 
   &__btn {
@@ -102,6 +102,11 @@
   &__item {
     width: calc(33.33333% - 2rem);
   }
+
+  &__all-products {
+    color: var(--primary-black);
+    border: 0.1rem solid var(--primary-grey-thrd);
+  }
 }
 
 .filter {
@@ -140,6 +145,8 @@
     font-weight: 700;
     font-size: 1.6rem;
     line-height: 125%;
+
+    display: none;
   }
 
   &__items {
@@ -172,6 +179,8 @@
 
     &:hover {
       border-color: var(--primary-accent);
+      background-color: var(--primary-accent);
+      color: var(--white);
     }
 
     label {

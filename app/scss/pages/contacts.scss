@@ -62,6 +62,10 @@
       line-height: 120%;
       text-transform: uppercase;
       color: inherit;
+
+      &:hover {
+        text-decoration-line: underline;
+      }
     }
   }
 }
@@ -116,6 +120,10 @@
       line-height: 100%;
       text-transform: uppercase;
       color: var(--white);
+
+      &:hover {
+        text-decoration-line: underline;
+      }
     }
 
     &:last-child {

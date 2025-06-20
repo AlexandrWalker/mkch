@@ -34,6 +34,10 @@ section {
   min-height: 100vh;
   position: relative;
   padding-top: 19.4rem;
+
+  &.innerPage {
+    padding-top: 24.4rem;
+  }
 }
 
 .main {
@@ -550,6 +554,12 @@ html.lenis body {
   background-color: var(--white);
   margin-bottom: 0;
 
+  position: fixed;
+  top: 19.4rem;
+  left: 0;
+  right: 0;
+  z-index: 100;
+
   &__container {
     display: flex;
     justify-content: space-between;
@@ -557,6 +567,7 @@ html.lenis body {
 
   &__inner {
     padding: 1.5rem 0;
+    height: 5rem;
   }
 
   ul {
@@ -598,6 +609,7 @@ html.lenis body {
 
     &:hover {
       color: var(--primary-color);
+      text-decoration-line: underline;
     }
   }
 
@@ -612,6 +624,11 @@ html.lenis body {
     border: 0;
 
     &.active {
+      background-color: var(--primary-accent);
+      color: var(--white);
+    }
+
+    &:hover {
       background-color: var(--primary-accent);
       color: var(--white);
     }

@@ -156,7 +156,18 @@
     min-width: unset;
   }
 
-  .filter__item label {
-    background-color: var(--white);
+  .filter__item {
+
+    &:hover {
+      label {
+        background-color: var(--primary-accent);
+        border-color: var(--primary-accent);
+      }
+    }
+
+    label {
+      background-color: var(--white);
+      transition: all 0.3s ease;
+    }
   }
 }

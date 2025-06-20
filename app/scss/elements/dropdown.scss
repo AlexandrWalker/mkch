@@ -34,9 +34,9 @@
 
     &::before {
       transform: rotate(90deg);
+      font-family: 'dwnld' !important;
       font-size: 1.1rem;
       line-height: 100%;
-      font-family: 'BY' !important;
       transition: all 0.2s ease;
     }
 
@@ -64,14 +64,6 @@
       transform: rotateZ(0deg);
       background-color: var(--primary-accent);
     }
-
-    // .dropdown.is-active & {
-
-    //   i {
-    //     transform: rotateZ(180deg);
-    //     background-color: var(--primary-black);
-    //   }
-    // }
   }
 
   &:hover {
