@@ -542,7 +542,6 @@
     const productDownload = document.querySelector('.product__head-download');
     const videoLink = document.querySelector('.video__link');
     const newsMain = document.querySelector('.news--main');
-    const newsHeadBtn = newsMain.querySelector('.news__head-btn');
 
     if (madeLink) {
       new TransferElements(
@@ -595,7 +594,7 @@
     if (newsMain) {
       new TransferElements(
         {
-          sourceElement: newsHeadBtn,
+          sourceElement: newsMain.querySelector('.news__head-btn'),
           breakpoints: {
             768: {
               targetElement: newsMain.querySelector('.news__inner')

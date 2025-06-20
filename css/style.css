@@ -258,6 +258,9 @@ section {
   position: relative;
   padding-top: 19.4rem;
 }
+.wrapper.innerPage {
+  padding-top: 24.4rem;
+}
 
 .main {
   -webkit-box-flex: 1;
@@ -805,6 +808,11 @@ html.lenis body {
 .breadcrumb {
   background-color: var(--white);
   margin-bottom: 0;
+  position: fixed;
+  top: 19.4rem;
+  left: 0;
+  right: 0;
+  z-index: 100;
 }
 .breadcrumb__container {
   display: -webkit-box;
@@ -816,6 +824,7 @@ html.lenis body {
 }
 .breadcrumb__inner {
   padding: 1.5rem 0;
+  height: 5rem;
 }
 .breadcrumb ul {
   display: -webkit-box;
@@ -865,6 +874,8 @@ html.lenis body {
 }
 .breadcrumb a:hover {
   color: var(--primary-color);
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
 }
 .breadcrumb .tabs__btns {
   height: 100%;
@@ -876,6 +887,10 @@ html.lenis body {
   border: 0;
 }
 .breadcrumb .tabs__btn.active {
+  background-color: var(--primary-accent);
+  color: var(--white);
+}
+.breadcrumb .tabs__btn:hover {
   background-color: var(--primary-accent);
   color: var(--white);
 }
@@ -1852,9 +1867,9 @@ html.lenis body {
   -webkit-transform: rotate(90deg);
       -ms-transform: rotate(90deg);
           transform: rotate(90deg);
+  font-family: "dwnld" !important;
   font-size: 1.1rem;
   line-height: 100%;
-  font-family: "BY" !important;
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
@@ -2084,6 +2099,9 @@ html.lenis body {
   height: -moz-fit-content;
   height: fit-content;
   overflow-y: auto;
+}
+.modal .form-input {
+  font-size: 1.6rem;
 }
 .modal .form-btn {
   width: 100%;
@@ -2886,12 +2904,16 @@ html.lenis body {
 .product__item h3 {
   font-weight: 700;
   font-size: 2.4rem;
+  line-height: 120%;
   color: var(--primary-color);
   margin-bottom: 2rem;
 }
 .product__item p {
   font-size: 1.6rem;
   margin-bottom: 3rem;
+}
+.product__item-link {
+  margin-top: auto;
 }
 .product__item-link i::before {
   font-size: 3rem;
@@ -3319,7 +3341,7 @@ html.lenis body {
   padding: 0;
 }
 .catalog__head .tabs__btn:not(.dropdown__label):hover {
-  background-color: var(--primary-accent);
+  background-color: var(--primary-color);
   color: var(--white);
 }
 .catalog__head .tabs__btn:not(.dropdown__label).tabs__btn--active {
@@ -3337,7 +3359,7 @@ html.lenis body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 2rem;
+  gap: 1rem;
 }
 .catalog__btn {
   display: -webkit-box;
@@ -3406,6 +3428,10 @@ html.lenis body {
 .catalog__item {
   width: calc(33.33333% - 2rem);
 }
+.catalog__all-products {
+  color: var(--primary-black);
+  border: 0.1rem solid var(--primary-grey-thrd);
+}
 
 .filter {
   display: -webkit-box;
@@ -3431,6 +3457,7 @@ html.lenis body {
   font-weight: 700;
   font-size: 1.6rem;
   line-height: 125%;
+  display: none;
 }
 .filter__items {
   display: none;
@@ -3472,6 +3499,8 @@ html.lenis body {
 }
 .filter__item:hover {
   border-color: var(--primary-accent);
+  background-color: var(--primary-accent);
+  color: var(--white);
 }
 .filter__item label {
   display: -webkit-box;
@@ -3721,8 +3750,15 @@ html.lenis body {
   width: 100%;
   min-width: unset;
 }
+.card .filter__item:hover label {
+  background-color: var(--primary-accent);
+  border-color: var(--primary-accent);
+}
 .card .filter__item label {
   background-color: var(--white);
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .certif {
@@ -4122,6 +4158,10 @@ html.lenis body {
   text-transform: uppercase;
   color: inherit;
 }
+.contacts__list-link:hover {
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+}
 
 .contacts-us {
   margin: 0;
@@ -4177,6 +4217,10 @@ html.lenis body {
   line-height: 100%;
   text-transform: uppercase;
   color: var(--white);
+}
+.contacts-us__block-link:hover {
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
 }
 .contacts-us__block:last-child {
   color: var(--white);
@@ -5560,6 +5604,12 @@ html.lenis body {
     padding: 0.2rem 2rem 0.8rem 3.9rem;
     margin-bottom: 2rem;
   }
+  .modal .form-input {
+    font-size: 1.2rem;
+  }
+  .modal .form-bottom p {
+    font-size: 1.2rem;
+  }
   .header {
     height: 8rem;
   }
@@ -6187,8 +6237,15 @@ html.lenis body {
     margin: 0;
     background: none;
   }
+  .wrapper.innerPage {
+    padding-top: 11.7rem;
+  }
+  .breadcrumb {
+    top: 8rem;
+  }
   .breadcrumb__inner {
     padding: 1rem 0;
+    height: 3.7rem;
   }
   .breadcrumb ul {
     font-size: 1.2rem;
@@ -6202,7 +6259,9 @@ html.lenis body {
   .breadcrumb .tabs__btn {
     font-size: 1.2rem;
     min-width: 8.3rem;
-    height: 4rem;
+  }
+  .breadcrumb .tabs__btn:not(.dropdown__label) {
+    height: 3.7rem;
   }
   .card__head .filter {
     display: block;
@@ -6323,6 +6382,9 @@ html.lenis body {
     padding: 1rem 2.5rem;
   }
   /* news page */
+  .innerPage .news {
+    padding-top: 2rem;
+  }
   .innerPage .news__item:nth-child(1) {
     -ms-grid-column: 1;
     -ms-grid-column-span: 2;
@@ -7018,6 +7080,9 @@ html.lenis body {
   }
 }
 @media (max-width: 520px) {
+  .wrapper.innerPage {
+    padding-top: 10.8rem;
+  }
   .hero {
     background-image: url(./../images/main/hero-mob.png);
     background-size: cover;
@@ -7563,6 +7628,7 @@ html.lenis body {
   }
   .breadcrumb__inner {
     padding: 0.7rem 0;
+    height: 2.8rem;
   }
   .breadcrumb ul {
     font-size: 1rem;
@@ -7866,9 +7932,6 @@ html.lenis body {
   }
   .values__block {
     width: 100%;
-  }
-  .values__content-title {
-    margin-bottom: 1rem;
   }
   .values__thumbs .swiper-pagination {
     display: none;
