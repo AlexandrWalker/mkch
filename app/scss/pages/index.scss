@@ -759,6 +759,20 @@
       }
     }
 
+    &:nth-child(6) {
+
+      &:hover {
+        background-image: url(./../images/main/news-2.png);
+      }
+    }
+
+    &:nth-child(7) {
+
+      &:hover {
+        background-image: url(./../images/main/news-1.png);
+      }
+    }
+
     h6 {
       font-weight: 700;
       font-size: 2rem;

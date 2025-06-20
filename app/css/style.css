@@ -2528,6 +2528,12 @@ html.lenis body {
 .news__item:nth-child(5):hover {
   background-image: url(./../images/main/news-1.png);
 }
+.news__item:nth-child(6):hover {
+  background-image: url(./../images/main/news-2.png);
+}
+.news__item:nth-child(7):hover {
+  background-image: url(./../images/main/news-1.png);
+}
 .news__item h6 {
   font-weight: 700;
   font-size: 2rem;
@@ -2625,6 +2631,10 @@ html.lenis body {
   flex-direction: row;
   align-items: center;
   gap: 1rem;
+}
+.catalog__btns .catalog__btn:hover {
+  background-color: var(--primary-accent);
+  color: var(--white);
 }
 .catalog__btn {
   display: flex;
@@ -3139,6 +3149,11 @@ html.lenis body {
 }
 .press .news__item-title {
   width: 60%;
+}
+.press .news__head .tabs__btn:hover {
+  background-color: var(--primary-accent);
+  border-color: var(--primary-accent);
+  color: var(--white);
 }
 
 .contacts {

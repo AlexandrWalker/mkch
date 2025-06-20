@@ -33,4 +33,10 @@
   .news__item-title {
     width: 60%;
   }
+
+  .news__head .tabs__btn:hover {
+    background-color: var(--primary-accent);
+    border-color: var(--primary-accent);
+    color: var(--white);
+  }
 }

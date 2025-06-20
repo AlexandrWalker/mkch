@@ -40,6 +40,11 @@
     flex-direction: row;
     align-items: center;
     gap: 1rem;
+
+    .catalog__btn:hover {
+      background-color: var(--primary-accent);
+      color: var(--white);
+    }
   }
 
   &__btn {
@@ -134,7 +139,7 @@
   &__parent {
 
     &--active {
-      
+
       div[data-tab="cream"] {
         display: none;
       }
