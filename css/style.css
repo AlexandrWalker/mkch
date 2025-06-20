@@ -4488,10 +4488,22 @@ html.lenis body {
   font-size: 5rem;
   line-height: 5.7rem;
   opacity: 0.5;
-  margin-bottom: 4rem;
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
+}
+.history__slider-count {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 5.7rem;
+  margin-bottom: 4rem;
 }
 .history__slider-line {
   display: block;
@@ -4651,6 +4663,7 @@ html.lenis body {
 }
 .values__block {
   width: calc(100% - 47rem);
+  margin-top: 3rem;
 }
 .values__slider {
   z-index: 1;
@@ -6712,10 +6725,13 @@ html.lenis body {
   .history__slide {
     width: 22rem;
   }
+  .history__slider-count {
+    height: 2rem;
+    margin-bottom: 3rem;
+  }
   .history__slider-item h3 {
     font-size: 2rem;
     line-height: 2rem;
-    margin-bottom: 3rem;
   }
   .history .swiper-slide-active .history__slider-item h3 {
     font-size: 3rem;
