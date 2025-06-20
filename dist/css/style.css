@@ -1645,6 +1645,22 @@ html.lenis body {
 .footer__list a.footer__list-title:hover {
   text-decoration: underline;
 }
+.footer__list .menu__item-body {
+  display: block;
+}
+.footer__list .menu__item-body h4 {
+  color: var(--primary-white-50);
+}
+.footer__list .menu__item-body li a {
+  font-size: 1.6rem;
+  color: var(--primary-white-50);
+}
+.footer__list .menu__item-body li a:hover {
+  color: var(--primary-white);
+}
+.footer__list .menu__item-body li:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
 .footer__contact {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4455,7 +4471,6 @@ html.lenis body {
 }
 .history__slider-item {
   position: relative;
-  padding-top: 9.7rem;
 }
 .history__slider-item p {
   font-weight: 400;
@@ -4477,9 +4492,6 @@ html.lenis body {
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  position: absolute;
-  top: 0;
-  left: 0;
 }
 .history__slider-line {
   display: block;
@@ -6699,9 +6711,6 @@ html.lenis body {
   }
   .history__slide {
     width: 22rem;
-  }
-  .history__slider-item {
-    padding-top: 5rem;
   }
   .history__slider-item h3 {
     font-size: 2rem;

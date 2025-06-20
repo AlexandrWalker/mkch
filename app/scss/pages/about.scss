@@ -173,7 +173,7 @@
 
     &-item {
       position: relative;
-      padding-top: 9.7rem;
+      // padding-top: 4rem;
 
       p {
         font-weight: 400;
@@ -192,9 +192,6 @@
         opacity: 0.5;
         margin-bottom: 4rem;
         transition: all 0.3s ease;
-        position: absolute;
-        top: 0;
-        left: 0;
       }
     }
 

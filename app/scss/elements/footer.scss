@@ -45,6 +45,27 @@
         text-decoration: underline;
       }
     }
+
+    .menu__item-body {
+      display: block;
+
+      h4 {
+        color: var(--primary-white-50);
+      }
+
+      li a {
+        font-size: 1.6rem;
+        color: var(--primary-white-50);
+
+        &:hover {
+          color: var(--primary-white);
+        }
+      }
+
+      li:not(:last-child) {
+        margin-bottom: 1.5rem;
+      }
+    }
   }
 
   &__contact {
