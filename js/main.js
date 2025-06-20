@@ -501,30 +501,36 @@
       });
     }
 
-    window.addEventListener('resize', function () {
+    $(window).on('resize load', function () {
 
       const headerPhone = document.getElementById('header-phone');
 
-      if (window.innerWidth <= 520) {
-        headerPhone.innerHTML = 'Связаться';
-      } else {
-        headerPhone.innerHTML = headerPhone.dataset.value;
+      if (headerPhone) {
+        if (window.innerWidth <= 520) {
+          headerPhone.innerHTML = 'Связаться';
+        } else {
+          headerPhone.innerHTML = headerPhone.dataset.value;
+        }
       }
 
       const cookieBtn = document.getElementById('cookie-btn');
 
-      if (window.innerWidth <= 520) {
-        cookieBtn.innerHTML = 'Ок';
-      } else {
-        cookieBtn.innerHTML = 'Принять';
+      if (cookieBtn) {
+        if (window.innerWidth <= 520) {
+          cookieBtn.innerHTML = 'Ок';
+        } else {
+          cookieBtn.innerHTML = 'Принять';
+        }
       }
 
       const productHeadDownload = document.querySelector('.product__head-download');
 
-      if (window.innerWidth <= 768) {
-        productHeadDownload.querySelector('span').innerHTML = 'Каталог продукции';
-      } else {
-        productHeadDownload.querySelector('span').innerHTML = productHeadDownload.querySelector('span').dataset.value;
+      if (productHeadDownload) {
+        if (window.innerWidth <= 768) {
+          productHeadDownload.querySelector('span').innerHTML = 'Каталог продукции';
+        } else {
+          productHeadDownload.querySelector('span').innerHTML = productHeadDownload.querySelector('span').dataset.value;
+        }
       }
     });
 
@@ -534,6 +540,9 @@
     const madeLink = document.getElementById('made-link');
     const roskachestvo = document.getElementById('roskachestvo');
     const productDownload = document.querySelector('.product__head-download');
+    const videoLink = document.querySelector('.video__link');
+    const newsMain = document.querySelector('.news--main');
+    const newsHeadBtn = newsMain.querySelector('.news__head-btn');
 
     if (madeLink) {
       new TransferElements(
@@ -571,6 +580,30 @@
         }
       );
     }
+    if (videoLink) {
+      new TransferElements(
+        {
+          sourceElement: videoLink,
+          breakpoints: {
+            768: {
+              targetElement: document.querySelector('.about__content')
+            }
+          },
+        }
+      );
+    }
+    if (newsMain) {
+      new TransferElements(
+        {
+          sourceElement: newsHeadBtn,
+          breakpoints: {
+            768: {
+              targetElement: newsMain.querySelector('.news__inner')
+            }
+          },
+        }
+      );
+    }
 
     /**
      * Инициализация Lenis и ScrollTrigger
@@ -598,6 +631,14 @@
     gsap.ticker.lagSmoothing(0);
 
     gsap.registerPlugin(ScrollTrigger);
+
+    $('.video__link').fancybox({
+      openEffect: 'none',
+      closeEffect: 'none',
+      helpers: {
+        media: {}
+      }
+    });
 
     const parallaxImgContainers = document.querySelectorAll('[data-animation="parallax-img"]');
     parallaxImgContainers.forEach(parallaxImgContainer => {
