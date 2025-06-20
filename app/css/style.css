@@ -4323,6 +4323,10 @@ html.lenis body {
   left: -1.4rem;
 }
 
+.privacy .main {
+  padding-top: 6rem;
+}
+
 @media (min-width: 1921px) {
   html {
     font-size: calc(10px + 0 * (100vw - var(--refRes) * 1px) / var(--refRes));
@@ -5492,6 +5496,9 @@ html.lenis body {
   .policy li {
     margin-bottom: 1.5rem;
   }
+  .privacy .main {
+    padding-top: 3rem;
+  }
   /* results */
   .results {
     margin-top: 2rem;
@@ -6456,11 +6463,7 @@ html.lenis body {
   .buy__item {
     width: 100%;
   }
-  .buy__item h3 {
-    font-size: 1.2rem;
-  }
   .buy__item li {
-    font-size: 1.2rem;
     margin-bottom: 1.5rem;
   }
   .buy__item a {
