@@ -1249,10 +1249,12 @@
     width: 4rem;
     height: 4rem;
     flex-shrink: 0;
+    background-color: var(--primary-red);
   }
 
   .video__link-icon i {
     font-size: 1rem;
+    color: var(--white);
   }
 
   .video__link-text {
@@ -2645,8 +2647,25 @@
     bottom: 2rem;
   }
 
+  .values__slider-img {
+    z-index: 1;
+  }
+
+  .values__slider-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+    opacity: 0.61;
+  }
+
   .values__slider-item span {
     display: block;
+    z-index: 3;
   }
 
   .mission {
