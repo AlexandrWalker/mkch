@@ -162,7 +162,7 @@
     height: 69.6rem;
     overflow: hidden;
     position: relative;
-    transition: all 0.5s ease;
+    transition: all 0.8s ease;
 
     &.prev {
       .work__item-head {
@@ -229,7 +229,7 @@
       width: 102rem;
       height: 100%;
       position: relative;
-      transition: all 0.5s ease;
+      transition: all 0.8s ease;
       background: linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.73) 100%);
     }
 

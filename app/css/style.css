@@ -2073,7 +2073,7 @@ html.lenis body {
   height: 69.6rem;
   overflow: hidden;
   position: relative;
-  transition: all 0.5s ease;
+  transition: all 0.8s ease;
 }
 .work__item.prev .work__item-head {
   background-color: var(--primary-color);
@@ -2120,7 +2120,7 @@ html.lenis body {
   width: 102rem;
   height: 100%;
   position: relative;
-  transition: all 0.5s ease;
+  transition: all 0.8s ease;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.73) 100%);
 }
 .work__item-img {
