@@ -1,3 +1,5 @@
+// const { init } = require("browser-sync");
+
 (() => {
   document.addEventListener('DOMContentLoaded', () => {
 
@@ -30,6 +32,7 @@
       slidesPerGroup: 1,
       watchSlidesProgress: true,
       speed: 600,
+      init: false,
       mousewheel: {
         forceToAxis: true,
       },
@@ -60,9 +63,8 @@
       speed: 600,
       loop: true,
       watchSlidesProgress: true,
-      mousewheel: {
-        forceToAxis: true,
-      },
+      grabCursor: false,
+      mousewheel: false,
       pagination: {
         el: ".swiper-pagination",
         type: "fraction",
@@ -660,6 +662,48 @@
           },
         }
       );
+    });
+
+    $(window).on('resize load', function () {
+      // window.addEventListener('resize load', function () {
+
+      if (window.innerWidth <= '768') {
+        history__slider.init();
+      } else {
+        /* history animation */
+        const panelsContainers = document.getElementById("history__slider");
+
+        if (panelsContainers) {
+          let panelsContainer = document.querySelector("#history__slider"), tween;
+          const panels = gsap.utils.toArray("#history__slider .history__slide");
+
+          tween = gsap.to(panels, {
+            x: () => -1 * (panelsContainer.scrollWidth - (innerWidth / 3)),
+            ease: "none",
+            scrollTrigger: {
+              trigger: "#history__inner",
+              pin: true,
+              start: "top 20%",
+              scrub: 1,
+              end: () => "+=" + (panelsContainer.scrollWidth - innerWidth),
+              // markers: true,
+            }
+          });
+        }
+
+        $(window).on('scroll', function () {
+
+          const story__slides = document.querySelectorAll('.history__slide');
+
+          story__slides.forEach(story__slide => {
+            if (story__slide.getBoundingClientRect().left < window.innerWidth / 3 && story__slide.getBoundingClientRect().right > window.innerWidth / 3) {
+              story__slide.classList.add('swiper-slide-active');
+            } else {
+              story__slide.classList.remove('swiper-slide-active');
+            }
+          });
+        });
+      }
     });
 
     if (('; ' + document.cookie).split(`; COOKIE_ACCEPT=`).pop().split(';')[0] !== '1') {
