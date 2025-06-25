@@ -3005,9 +3005,15 @@ html.lenis body {
   letter-spacing: -1.5rem;
   color: var(--primary-accent);
 }
+.geo__body-count.active .number:not(:first-child) {
+  display: inline-block;
+  margin-left: calc(-1ch + 4rem);
+}
+.geo__body-count.active .number:not(:first-child)::first-letter {
+  opacity: 0;
+}
 .geo__body-count span {
   display: block;
-  width: 58.2rem;
   text-align: right;
 }
 .geo__body-count img {
@@ -6045,9 +6051,10 @@ html.lenis body {
     height: 4.7rem;
     font-size: 6.5rem;
     letter-spacing: -0.5rem;
+    gap: 1rem;
   }
-  .geo__body-count span {
-    width: 18.9rem;
+  .geo__body-count.active .number:not(:first-child) {
+    margin-left: calc(-1ch + 1rem);
   }
   .geo__body-img {
     margin-top: 1rem;
