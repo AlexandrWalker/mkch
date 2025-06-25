@@ -435,10 +435,15 @@
     height: 4.7rem;
     font-size: 6.5rem;
     letter-spacing: -0.5rem;
+    gap: 1rem;
   }
 
   .geo__body-count span {
-    width: 18.9rem;
+    // width: 18.9rem;
+  }
+
+  .geo__body-count.active .number:not(:first-child) {
+    margin-left: calc(-1ch + 1rem);
   }
 
   .geo__body-img {

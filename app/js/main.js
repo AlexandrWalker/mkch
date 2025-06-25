@@ -312,9 +312,10 @@
         const num = Number(array.dataset.val);
         let interval = setInterval(() => {
           n < num ? (n += num / (time / 10)) : clearInterval(interval);
+          n < num ? (n += num / (time / 10)) : numbs.classList.add('active');
           array.classList.contains('frac')
-            ? (array.innerHTML = n.toFixed(1))
-            : (array.innerHTML = Math.round(n));
+            ? (array.innerHTML = new Intl.NumberFormat('ru-RU').format(n.toFixed(1)))
+            : (array.innerHTML = new Intl.NumberFormat('ru-RU').format(Math.round(n)));
         }, 10);
       }
 
@@ -340,6 +341,20 @@
       searchBtn.addEventListener('click', function () {
 
         searchBtn.parentNode.classList.toggle('search--show');
+
+        window.addEventListener('keydown', (e) => {
+          if (e.key === "Escape") {
+            searchBtn.parentNode.classList.remove("search--show")
+          }
+        });
+
+        document.addEventListener('click', (e) => {
+          const withinBoundaries = e.composedPath().includes(searchBtn.parentNode);
+
+          if (!withinBoundaries) {
+            searchBtn.parentNode.classList.remove("search--show")
+          }
+        })
       });
     }
 

@@ -516,9 +516,20 @@
       letter-spacing: -1.5rem;
       color: var(--primary-accent);
 
+      &.active {
+
+        .number:not(:first-child) {
+          display: inline-block;
+          margin-left: calc(-1ch + 4rem);
+
+          &::first-letter {
+            opacity: 0;
+          }
+        }
+      }
+
       span {
         display: block;
-        width: 58.2rem;
         text-align: right;
       }
 
@@ -736,7 +747,7 @@
       &::before {
         opacity: 1;
       }
-      
+
       &::after {
         background-image: url(./../images/main/news-1.png);
         opacity: 1;
