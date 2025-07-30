@@ -3391,22 +3391,13 @@ html.lenis body {
           align-items: center;
   gap: 2rem;
   margin-bottom: 4rem;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
-.catalog__head .tabs__btns {
-  gap: 1rem;
-}
-.catalog__head .tabs__btn:not(.dropdown__label) {
-  background-color: var(--white);
-  border: unset;
-  padding: 0;
-}
-.catalog__head .tabs__btn:not(.dropdown__label):hover {
-  background-color: var(--primary-color);
-  color: var(--white);
-}
-.catalog__head .tabs__btn:not(.dropdown__label).tabs__btn--active {
-  background-color: var(--primary-color);
-  color: var(--white);
+.catalog__head[data-primary=b2b] #category-smetana,
+.catalog__head[data-primary=b2b] .catalog__filter-item--flag {
+  display: none;
 }
 .catalog__btns {
   display: -webkit-box;
@@ -3463,15 +3454,12 @@ html.lenis body {
   color: var(--white);
 }
 .catalog__body {
-  display: none;
-  opacity: 0;
-}
-.catalog__body.tabs__catalog--active {
-  display: block;
-  opacity: 1;
-  -webkit-transition: opacity 0.3s ease;
-  -o-transition: opacity 0.3s ease;
-  transition: opacity 0.3s ease;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 3rem;
 }
 .catalog__items {
   display: none;
@@ -3491,10 +3479,189 @@ html.lenis body {
 }
 .catalog__item {
   width: calc(33.33333% - 2rem);
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  position: absolute;
+  bottom: -50%;
+  z-index: -1;
+}
+.catalog__item--show {
+  max-height: 100%;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+  position: static;
+  bottom: 0;
+  z-index: 1;
 }
 .catalog__all-products {
   color: var(--primary-black);
   border: 0.1rem solid var(--primary-grey-thrd);
+}
+.catalog__head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.catalog__head-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+.catalog__filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.catalog__filter:not(.catalog__filter--all, .catalog__filter--category, .catalog__filter--primary) {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  position: absolute;
+  z-index: -1;
+}
+.catalog__filter.show {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+  max-width: 100%;
+  position: static;
+  z-index: 1;
+}
+.catalog__filter--primary .catalog__filter-item {
+  min-width: 19rem;
+  background-color: var(--white);
+  border: 0;
+  -webkit-box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.05);
+          box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.05);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+.catalog__filter--primary .catalog__filter-item:hover {
+  background-color: var(--primary-accent);
+}
+.catalog__filter--category .catalog__filter-item {
+  min-width: 12.4rem;
+  border: 0;
+  background-color: var(--white);
+}
+.catalog__filter--category .catalog__filter-item:hover {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+.catalog__filter--category .catalog__filter-item input:checked + label {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+.catalog__filter-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 5rem;
+  border-radius: 2.5rem;
+  border: 0.1rem solid var(--primary-grey-thrd);
+  background-color: transparent;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 125%;
+  text-align: center;
+  cursor: pointer;
+}
+.catalog__filter-item:hover {
+  background-color: var(--primary-accent);
+  color: var(--white);
+}
+.catalog__filter-item--all label {
+  padding: 0 2.15rem !important;
+}
+.catalog__filter-item label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0 1.55rem;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.catalog__filter-item input {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  z-index: -10;
+}
+.catalog__filter-item input:checked + label {
+  background-color: var(--primary-accent);
+  color: var(--white);
+}
+
+[data-category=category-milk].checked #category-milk {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .filter {
@@ -6318,6 +6485,9 @@ html.lenis body {
     padding-bottom: 2rem;
     margin-bottom: 2rem;
   }
+  .catalog__body {
+    gap: 2rem;
+  }
   .filter__item {
     font-size: 1.2rem;
     min-width: 7rem;
@@ -7720,6 +7890,9 @@ html.lenis body {
   }
   .catalog__all-products {
     width: 100%;
+  }
+  .catalog__body {
+    gap: 1rem;
   }
   .filter {
     width: 100%;

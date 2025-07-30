@@ -733,6 +733,10 @@
     margin-bottom: 2rem;
   }
 
+  .catalog__body {
+    gap: 2rem;
+  }
+
   .filter__item {
     font-size: 1.2rem;
     min-width: 7rem;
@@ -2297,6 +2301,10 @@
 
   .catalog__all-products {
     width: 100%;
+  }
+
+  .catalog__body {
+    gap: 1rem;
   }
 
   .filter {
