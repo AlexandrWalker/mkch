@@ -3399,6 +3399,9 @@ html.lenis body {
 .catalog__head[data-primary=b2b] .catalog__filter-item--flag {
   display: none;
 }
+.catalog__head[data-primary=b2c] .only-b2b {
+  display: none;
+}
 .catalog__btns {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3568,26 +3571,31 @@ html.lenis body {
 }
 .catalog__filter--primary .catalog__filter-item {
   min-width: 19rem;
-  background-color: var(--white);
   border: 0;
   -webkit-box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.05);
           box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.05);
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
 }
-.catalog__filter--primary .catalog__filter-item:hover {
+.catalog__filter--primary .catalog__filter-item label {
+  background-color: var(--white);
+}
+.catalog__filter--primary .catalog__filter-item label:hover {
   background-color: var(--primary-accent);
 }
 .catalog__filter--category .catalog__filter-item {
   min-width: 12.4rem;
   border: 0;
-  background-color: var(--white);
 }
-.catalog__filter--category .catalog__filter-item:hover {
+.catalog__filter--category .catalog__filter-item input:checked + label {
   background-color: var(--primary-color);
   color: var(--white);
 }
-.catalog__filter--category .catalog__filter-item input:checked + label {
+.catalog__filter--category .catalog__filter-item label {
+  background-color: var(--white);
+  border: 0;
+}
+.catalog__filter--category .catalog__filter-item label:hover {
   background-color: var(--primary-color);
   color: var(--white);
 }
@@ -3606,8 +3614,6 @@ html.lenis body {
   width: fit-content;
   height: 5rem;
   border-radius: 2.5rem;
-  border: 0.1rem solid var(--primary-grey-thrd);
-  background-color: transparent;
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
@@ -3618,10 +3624,6 @@ html.lenis body {
   line-height: 125%;
   text-align: center;
   cursor: pointer;
-}
-.catalog__filter-item:hover {
-  background-color: var(--primary-accent);
-  color: var(--white);
 }
 .catalog__filter-item--all label {
   padding: 0 2.15rem !important;
@@ -3643,8 +3645,16 @@ html.lenis body {
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  border-radius: 2.5rem;
+  border: 0.1rem solid var(--primary-grey-thrd);
+  background-color: transparent;
+  transition: all 0.3s ease;
   cursor: pointer;
   white-space: nowrap;
+}
+.catalog__filter-item label:hover {
+  background-color: var(--primary-accent);
+  color: var(--white);
 }
 .catalog__filter-item input {
   visibility: hidden;
@@ -3718,7 +3728,6 @@ html.lenis body {
   min-width: 8.4rem;
   height: 5rem;
   border-radius: 2.5rem;
-  background-color: transparent;
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
@@ -3726,15 +3735,9 @@ html.lenis body {
   font-size: 1.6rem;
   line-height: 125%;
   text-align: center;
-  border: 0.1rem solid var(--primary-grey-thrd);
   position: relative;
   overflow: hidden;
   cursor: pointer;
-}
-.filter__item:hover {
-  border-color: var(--primary-accent);
-  background-color: var(--primary-accent);
-  color: var(--white);
 }
 .filter__item label {
   display: -webkit-box;
@@ -3756,6 +3759,14 @@ html.lenis body {
   z-index: 1;
   margin: 0;
   cursor: pointer;
+  border-radius: 2.5rem;
+  background-color: transparent;
+  border: 0.1rem solid var(--primary-grey-thrd);
+}
+.filter__item label:hover {
+  border-color: var(--primary-accent);
+  background-color: var(--primary-accent);
+  color: var(--white);
 }
 .filter__item input {
   visibility: hidden;
@@ -3984,7 +3995,7 @@ html.lenis body {
   width: 100%;
   min-width: unset;
 }
-.card .filter__item:hover label {
+.card .filter__item label:hover {
   background-color: var(--primary-accent);
   border-color: var(--primary-accent);
 }
@@ -8414,6 +8425,25 @@ html.lenis body {
     -webkit-column-count: unset;
        -moz-column-count: unset;
             column-count: unset;
+  }
+  /* new */
+  .catalog__filter-item {
+    height: 4rem;
+    font-size: 1.4rem;
+  }
+  .catalog__head-item {
+    width: 100%;
+  }
+  .catalog__filter--primary {
+    width: 100%;
+  }
+  .catalog__filter--primary .catalog__filter-item {
+    width: calc(50% - 0.5rem);
+    min-width: unset;
+  }
+  .catalog__filter--category {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 }
 @media (max-width: 480px) {

@@ -21,11 +21,19 @@
             });
           }
           document.getElementById(catalogCategory.dataset.category).classList.toggle('show');
+
+          if (catalogCategory.dataset.category == 'category-maslo' && document.querySelector('.catalog__head').dataset.primary == 'b2b') {
+            document.getElementById('category-maslo-wt').classList.add('show');
+          } else {
+            console.log('NOPE');
+          }
+
           catalogBody.setAttribute('data-category', catalogCategory.dataset.category);
           console.log(catalogCategory.dataset.category);
           const allCategory = document.getElementById(catalogCategory.dataset.category).querySelector('.catalog__filter-item--all');
           allCategory.querySelector('.catalog__type').click();
           catalogUpdate();
+          catalogAll();
         })
       });
 
@@ -36,9 +44,9 @@
 
           const catalogFilter = document.querySelector('.catalog__filter.show');
           const catalogFilterItemAll = catalogFilter.querySelector('.catalog__filter-item--all');
-          // catalogFilterItemAll.querySelector('.catalog__type').click();
-          catalogFilterItemAll.querySelector('.catalog__type').setAttribute('checked', 'true');
+          catalogFilterItemAll.querySelector('label').click();
           catalogUpdate();
+          catalogAll();
         })
       });
 

@@ -2874,6 +2874,30 @@
   .principles-feat__desc-wrap {
     column-count: unset;
   }
+
+
+  /* new */
+  .catalog__filter-item {
+    height: 4rem;
+    font-size: 1.4rem;
+  }
+
+  .catalog__head-item {
+    width: 100%;
+  }
+
+  .catalog__filter--primary {
+    width: 100%;
+  }
+
+  .catalog__filter--primary .catalog__filter-item {
+    width: calc(50% - 0.5rem);
+    min-width: unset;
+  }
+
+  .catalog__filter--category {
+    flex-wrap: wrap;
+  }
 }
 
 @media (max-width: 480px) {

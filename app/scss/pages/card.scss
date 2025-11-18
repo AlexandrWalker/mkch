@@ -158,8 +158,9 @@
 
   .filter__item {
 
-    &:hover {
-      label {
+    label {
+      
+      &:hover {
         background-color: var(--primary-accent);
         border-color: var(--primary-accent);
       }

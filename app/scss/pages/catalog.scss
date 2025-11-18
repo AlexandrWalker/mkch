@@ -20,10 +20,18 @@
       #category-smetana,
       .catalog__filter-item--flag {
         display: none;
+        // opacity: 0;
+        // max-width: 0;
+        // min-width: unset;
       }
     }
 
-    &[data-primary="b2c"] {}
+    &[data-primary="b2c"] {
+
+      .only-b2b {
+        display: none;
+      }
+    }
 
     // .tabs__btns {
     //   gap: 1rem;
@@ -192,13 +200,21 @@
 
       .catalog__filter-item {
         min-width: 19rem;
-        background-color: var(--white);
+        // background-color: var(--white);
         border: 0;
         box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.05);
         backdrop-filter: blur(10px);
 
         &:hover {
-          background-color: var(--primary-accent);
+          // background-color: var(--primary-accent);
+        }
+
+        label {
+          background-color: var(--white);
+
+          &:hover {
+            background-color: var(--primary-accent);
+          }
         }
       }
     }
@@ -208,16 +224,26 @@
       .catalog__filter-item {
         min-width: 12.4rem;
         border: 0;
-        background-color: var(--white);
+        // background-color: var(--white);
 
         &:hover {
-          background-color: var(--primary-color);
-          color: var(--white);
+          // background-color: var(--primary-color);
+          // color: var(--white);
         }
 
         input:checked+label {
           background-color: var(--primary-color);
           color: var(--white);
+        }
+
+        label {
+          background-color: var(--white);
+          border: 0;
+
+          &:hover {
+            background-color: var(--primary-color);
+            color: var(--white);
+          }
         }
       }
     }
@@ -229,8 +255,8 @@
       width: fit-content;
       height: 5rem;
       border-radius: 2.5rem;
-      border: 0.1rem solid var(--primary-grey-thrd);
-      background-color: transparent;
+      // border: 0.1rem solid var(--primary-grey-thrd);
+      // background-color: transparent;
       transition: all 0.3s ease;
       position: relative;
       overflow: hidden;
@@ -241,10 +267,10 @@
       text-align: center;
       cursor: pointer;
 
-      &:hover {
-        background-color: var(--primary-accent);
-        color: var(--white);
-      }
+      // &:hover {
+      //   background-color: var(--primary-accent);
+      //   color: var(--white);
+      // }
 
       &--all {
 
@@ -263,8 +289,18 @@
         padding: 0 1.55rem;
         transition: all 0.3s ease;
 
+        border-radius: 2.5rem;
+        border: 0.1rem solid var(--primary-grey-thrd);
+        background-color: transparent;
+        transition: all 0.3s ease;
+
         cursor: pointer;
         white-space: nowrap;
+
+        &:hover {
+          background-color: var(--primary-accent);
+          color: var(--white);
+        }
       }
 
       input {
@@ -351,21 +387,21 @@
     min-width: 8.4rem;
     height: 5rem;
     border-radius: 2.5rem;
-    background-color: transparent;
+    // background-color: transparent;
     transition: all 0.3s ease;
     font-weight: 700;
     font-size: 1.6rem;
     line-height: 125%;
     text-align: center;
-    border: 0.1rem solid var(--primary-grey-thrd);
+    // border: 0.1rem solid var(--primary-grey-thrd);
     position: relative;
     overflow: hidden;
     cursor: pointer;
 
     &:hover {
-      border-color: var(--primary-accent);
-      background-color: var(--primary-accent);
-      color: var(--white);
+      // border-color: var(--primary-accent);
+      // background-color: var(--primary-accent);
+      // color: var(--white);
     }
 
     label {
@@ -382,6 +418,16 @@
       z-index: 1;
       margin: 0;
       cursor: pointer;
+
+      border-radius: 2.5rem;
+      background-color: transparent;
+      border: 0.1rem solid var(--primary-grey-thrd);
+
+      &:hover {
+        border-color: var(--primary-accent);
+        background-color: var(--primary-accent);
+        color: var(--white);
+      }
     }
 
     input {
